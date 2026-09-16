@@ -1,269 +1,297 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>VIVO X300 ULTRA｜手機租借</title>
+<title>VIVO X300 ULTRA｜手機租借</title>
 
-  <style>
-    * {
-      box-sizing: border-box;
-    }
+<style>
+* {
+  box-sizing: border-box;
+}
 
-    body {
-      margin: 0;
-      font-family:
-        -apple-system,
-        BlinkMacSystemFont,
-        "Noto Sans TC",
-        "Microsoft JhengHei",
-        sans-serif;
-      background: #f7f7f7;
-      color: #222;
-      line-height: 1.7;
-    }
+body {
+  margin: 0;
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Noto Sans TC",
+    "Microsoft JhengHei",
+    sans-serif;
+  background: #f7f7f7;
+  color: #222;
+  line-height: 1.7;
+}
 
-    header {
-      background: #111;
-      color: white;
-      text-align: center;
-      padding: 35px 20px;
-    }
+header {
+  background: #111;
+  color: white;
+  text-align: center;
+  padding: 35px 20px;
+}
 
-    header h1 {
-      margin: 0 0 8px;
-      font-size: 30px;
-    }
+header h1 {
+  margin: 0 0 8px;
+  font-size: 30px;
+}
 
-    header p {
-      margin: 4px 0;
-      opacity: .9;
-    }
+header p {
+  margin: 4px 0;
+  opacity: .9;
+}
 
-    .version {
-      margin-top: 12px;
-      font-size: 12px;
-      opacity: .65;
-    }
+.version {
+  margin-top: 12px;
+  font-size: 12px;
+  opacity: .65;
+}
 
-    .container {
-      max-width: 1000px;
-      margin: auto;
-      padding: 20px;
-    }
+.container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 20px;
+}
 
-    .card {
-      background: white;
-      border-radius: 16px;
-      padding: 20px;
-      margin-bottom: 20px;
-      box-shadow: 0 3px 15px rgba(0,0,0,.06);
-    }
+.card {
+  background: white;
+  border-radius: 16px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 3px 15px rgba(0,0,0,.06);
+}
 
-    h2 {
-      margin-top: 0;
-    }
+h2 {
+  margin-top: 0;
+}
 
-    .equipment-grid,
-    .price-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 15px;
-    }
+.equipment-grid,
+.price-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+}
 
-    .equipment,
-    .price-box {
-      border: 1px solid #eee;
-      border-radius: 14px;
-      padding: 18px;
-      background: #fff;
-    }
+.equipment,
+.price-box {
+  border: 1px solid #eee;
+  border-radius: 14px;
+  padding: 18px;
+  background: #fff;
+}
 
-    .equipment h3,
-    .price-box h3 {
-      margin-top: 0;
-    }
+.equipment h3,
+.price-box h3 {
+  margin-top: 0;
+}
 
-    .price {
-      font-size: 25px;
-      font-weight: bold;
-    }
+.price {
+  font-size: 25px;
+  font-weight: bold;
+}
 
-    .muted {
-      color: #777;
-      font-size: 13px;
-    }
+.muted {
+  color: #777;
+  font-size: 13px;
+}
 
-    .sync-status {
-      padding: 14px 15px;
-      border-radius: 10px;
-      background: #f1f1f1;
-      margin-top: 15px;
-      font-size: 14px;
-    }
+.sync-status {
+  padding: 14px 15px;
+  border-radius: 10px;
+  background: #f1f1f1;
+  margin-top: 15px;
+  font-size: 14px;
+}
 
-    .sync-ok {
-      background: #eefaf1;
-      color: #176b31;
-    }
+.sync-ok {
+  background: #eefaf1;
+  color: #176b31;
+}
 
-    .sync-error {
-      background: #fff1f1;
-      color: #a00000;
-    }
+.sync-error {
+  background: #fff1f1;
+  color: #a00000;
+}
 
-    .calendar-tabs {
-      display: flex;
-      gap: 8px;
-      margin-bottom: 15px;
-      flex-wrap: wrap;
-    }
+.calendar-tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+}
 
-    .calendar-tabs button {
-      border: 0;
-      padding: 9px 15px;
-      border-radius: 20px;
-      cursor: pointer;
-      background: #eee;
-    }
+.calendar-tabs button {
+  border: 0;
+  padding: 9px 15px;
+  border-radius: 20px;
+  cursor: pointer;
+  background: #eee;
+}
 
-    .calendar-tabs button.active {
-      background: #111;
-      color: white;
-    }
+.calendar-tabs button.active {
+  background: #111;
+  color: white;
+}
 
-    .calendar-title {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 15px;
-    }
+.calendar-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
 
-    .calendar-title button {
-      border: 0;
-      background: #eee;
-      border-radius: 8px;
-      padding: 7px 12px;
-      cursor: pointer;
-      font-size: 18px;
-    }
+.calendar-title button {
+  border: 0;
+  background: #eee;
+  border-radius: 8px;
+  padding: 7px 12px;
+  cursor: pointer;
+  font-size: 18px;
+}
 
-    .calendar {
-      display: grid;
-      grid-template-columns: repeat(7, 1fr);
-      gap: 5px;
-    }
+.calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+}
 
-    .weekday {
-      text-align: center;
-      font-weight: bold;
-      font-size: 13px;
-      padding: 6px 0;
-    }
+.weekday {
+  text-align: center;
+  font-weight: bold;
+  font-size: 13px;
+  padding: 6px 0;
+}
 
-    .day {
-      min-height: 75px;
-      background: #fafafa;
-      border: 1px solid #eee;
-      border-radius: 8px;
-      padding: 5px;
-      font-size: 13px;
-    }
+.day {
+  min-height: 75px;
+  background: #fafafa;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  padding: 5px;
+  font-size: 13px;
+}
 
-    .day-number {
-      font-weight: bold;
-    }
+.day-number {
+  font-weight: bold;
+}
 
-    .available {
-      color: #17863b;
-      font-weight: bold;
-    }
+.available {
+  color: #17863b;
+  font-weight: bold;
+}
 
-    .rented {
-      color: #d62828;
-      font-weight: bold;
-    }
+.rented {
+  color: #d62828;
+  font-weight: bold;
+}
 
-    .empty {
-      background: transparent;
-      border: 0;
-    }
+.empty {
+  background: transparent;
+  border: 0;
+}
 
-    .legend {
-      margin-top: 12px;
-      font-size: 14px;
-    }
+.legend {
+  margin-top: 12px;
+  font-size: 14px;
+}
 
-    select,
-    input {
-      width: 100%;
-      padding: 10px;
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      margin-top: 5px;
-      margin-bottom: 12px;
-      font-size: 15px;
-    }
+select,
+input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-top: 5px;
+  margin-bottom: 12px;
+  font-size: 15px;
+}
 
-    .result {
-      background: #f5f5f5;
-      border-radius: 10px;
-      padding: 15px;
-      margin-top: 10px;
-    }
+.result {
+  background: #f5f5f5;
+  border-radius: 10px;
+  padding: 15px;
+  margin-top: 10px;
+}
 
-    footer {
-      text-align: center;
-      color: #777;
-      font-size: 13px;
-      padding: 30px 15px;
-    }
+.discount-box {
+  background: #fff8e8;
+  border-radius: 12px;
+  padding: 15px;
+  margin-top: 15px;
+}
 
-    .debug-box {
-      margin-top: 10px;
-      padding: 10px;
-      border-radius: 8px;
-      background: #fafafa;
-      color: #666;
-      font-size: 12px;
-      display: none;
-    }
+.overtime-box {
+  background: #f5f5f5;
+  border-radius: 12px;
+  padding: 15px;
+  margin-top: 15px;
+}
 
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 25px;
-      }
+.faq-item {
+  border-bottom: 1px solid #eee;
+  padding: 14px 0;
+}
 
-      .container {
-        padding: 12px;
-      }
+.faq-item:last-child {
+  border-bottom: 0;
+}
 
-      .day {
-        min-height: 65px;
-        font-size: 12px;
-      }
-    }
-  </style>
+.faq-question {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+footer {
+  text-align: center;
+  color: #777;
+  font-size: 13px;
+  padding: 30px 15px;
+}
+
+.debug-box {
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 8px;
+  background: #fafafa;
+  color: #666;
+  font-size: 12px;
+  display: none;
+}
+
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 25px;
+  }
+
+  .container {
+    padding: 12px;
+  }
+
+  .day {
+    min-height: 65px;
+    font-size: 12px;
+  }
+}
+</style>
 </head>
 
 <body>
 
 <header>
 
-  <h1>📱 VIVO X300 ULTRA</h1>
+<h1>📱 VIVO X300 ULTRA</h1>
 
-  <p>
-    手機租借｜演唱會・追星拍攝・活動攝影
-  </p>
+<p>
+📍 台南／高雄面交｜全台寄送
+</p>
 
-  <p>
-    台南／高雄面交・全台寄送
-  </p>
+<p>
+📸 事後返圖｜下次租借折 $100
+</p>
 
-  <div class="version">
-    Website V7｜2026-09-16
-  </div>
+<div class="version">
+Website V8｜2026-09-16
+</div>
 
 </header>
 
@@ -271,346 +299,529 @@
 <div class="container">
 
 
-  <!-- Google Sheet 同步 -->
+<!-- Google Sheet -->
 
-  <div class="card">
+<div class="card">
 
-    <h2>📡 檔期與價格</h2>
+<h2>📡 檔期與價格</h2>
 
-    <div
-      id="syncStatus"
-      class="sync-status"
-    >
-      ⏳ 正在連線 Google Sheet...
-    </div>
+<div id="syncStatus" class="sync-status">
+⏳ 正在連線 Google Sheet...
+</div>
 
-    <div
-      id="debugBox"
-      class="debug-box"
-    ></div>
+<div id="debugBox" class="debug-box"></div>
 
-  </div>
+</div>
 
 
+<!-- 設備 -->
 
-  <!-- 設備 -->
+<div class="card">
 
-  <div class="card">
+<h2>📦 租借設備</h2>
 
-    <h2>📦 租借設備</h2>
+<div class="equipment-grid">
 
-    <div class="equipment-grid">
 
-      <div class="equipment">
+<div class="equipment">
 
-        <h3>
-          📱 VIVO X300 ULTRA
-        </h3>
+<h3>📱 VIVO X300 ULTRA</h3>
 
-        <p>
-          適合演唱會、活動、追星拍攝。
-        </p>
+<p>
+適合演唱會、活動、追星拍攝。
+</p>
 
-        <p class="muted">
-          單機租借
-        </p>
+<p class="muted">
+單機租借
+</p>
 
-      </div>
+</div>
 
 
-      <div class="equipment">
+<div class="equipment">
 
-        <h3>
-          🔭 200mm
-        </h3>
+<h3>🔭 200mm 增距鏡</h3>
 
-        <p>
-          遠距離拍攝使用。
-        </p>
+<p>
+遠距離拍攝使用。
+</p>
 
-        <p class="muted">
-          可搭配手機租借
-        </p>
+<p class="muted">
+合租：含手柄
+</p>
 
-      </div>
+<p class="muted">
+單租：不含手柄
+</p>
 
+</div>
 
-      <div class="equipment">
 
-        <h3>
-          🔭 400mm
-        </h3>
+<div class="equipment">
 
-        <p>
-          更遠距離的拍攝需求。
-        </p>
+<h3>🔭 400mm 增距鏡</h3>
 
-        <p class="muted">
-          可搭配手機租借
-        </p>
+<p>
+更遠距離的拍攝需求。
+</p>
 
-      </div>
+<p class="muted">
+合租：含手柄
+</p>
 
-    </div>
+<p class="muted">
+單租：不含手柄
+</p>
 
-  </div>
+</div>
 
 
+<div class="equipment">
 
-  <!-- 價格 -->
+<h3>🔧 鏡頭轉接環</h3>
 
-  <div class="card">
+<p>
+增距鏡搭配使用。
+</p>
 
-    <h2>💰 價目表</h2>
+<p class="muted">
+依租借方案提供
+</p>
 
-    <div class="price-grid">
+</div>
 
-      <div class="price-box">
 
-        <h3>
-          📱 單機
-        </h3>
+<div class="equipment">
 
-        <div
-          id="phonePrice"
-          class="price"
-        >
-          載入中
-        </div>
+<h3>🖐️ 手柄</h3>
 
-        <div>
-          單日
-        </div>
+<p>
+增距鏡合租方案包含。
+</p>
 
-      </div>
+<p class="muted">
+單租增距鏡不包含
+</p>
 
+</div>
 
-      <div class="price-box">
 
-        <h3>
-          🔭 200mm
-        </h3>
+</div>
+</div>
 
-        <div
-          id="lens200Price"
-          class="price"
-        >
-          載入中
-        </div>
 
-        <div>
-          單日
-        </div>
+<!-- 價目表 -->
 
-      </div>
+<div class="card">
 
+<h2>💰 價目表</h2>
 
-      <div class="price-box">
+<div class="price-grid">
 
-        <h3>
-          🔭 400mm
-        </h3>
 
-        <div
-          id="lens400Price"
-          class="price"
-        >
-          載入中
-        </div>
+<div class="price-box">
 
-        <div>
-          單日
-        </div>
+<h3>📱 單機</h3>
 
-      </div>
+<div id="phonePrice" class="price">
+NT$700
+</div>
 
-    </div>
+<div>
+1～2 天：NT$700／天
+</div>
 
-  </div>
+<div>
+3 天以上：NT$600／天
+</div>
 
+</div>
 
 
-  <!-- 日曆 -->
+<div class="price-box">
 
-  <div class="card">
+<h3>📱＋🔭 增距鏡合租</h3>
 
-    <h2>
-      📅 租借檔期
-    </h2>
+<div id="lensWithPhonePrice" class="price">
+NT$200
+</div>
 
-    <div class="calendar-tabs">
+<div>
+200mm／400mm
+</div>
 
-      <button
-        class="active"
-        onclick="changeEquipment('手機', this)"
-      >
-        📱 手機
-      </button>
+<div>
+<strong>含手柄</strong>
+</div>
 
-      <button
-        onclick="changeEquipment('200mm', this)"
-      >
-        🔭 200mm
-      </button>
+</div>
 
-      <button
-        onclick="changeEquipment('400mm', this)"
-      >
-        🔭 400mm
-      </button>
 
-    </div>
+<div class="price-box">
 
+<h3>🔭 增距鏡單租</h3>
 
-    <div class="calendar-title">
+<div id="lensAlonePrice" class="price">
+NT$300
+</div>
 
-      <button
-        onclick="changeMonth(-1)"
-      >
-        ‹
-      </button>
+<div>
+200mm／400mm
+</div>
 
-      <strong
-        id="calendarMonth"
-      ></strong>
+<div>
+<strong>不含手柄</strong>
+</div>
 
-      <button
-        onclick="changeMonth(1)"
-      >
-        ›
-      </button>
+</div>
 
-    </div>
+</div>
 
 
-    <div
-      id="calendar"
-      class="calendar"
-    ></div>
+<div class="discount-box">
 
+<strong>⟡ 長租優惠 ⟡</strong>
 
-    <div class="legend">
-      🟢 可租　🔴 已租
-    </div>
+<br><br>
 
-  </div>
+🗓️ <strong>10 天（含）以上</strong>
 
+<br>
 
+📱＋🔭 200mm／400mm
+➜ <strong>8 折</strong>
 
-  <!-- 試算 -->
+<br>
 
-  <div class="card">
+📱＋🔭 200mm＋400mm
+➜ <strong>7 折</strong>
 
-    <h2>
-      🧮 租借費用試算
-    </h2>
+</div>
 
+</div>
 
-    <label>
-      設備
-    </label>
 
-    <select
-      id="calcEquipment"
-    >
+<!-- 日曆 -->
 
-      <option value="手機">
-        手機
-      </option>
+<div class="card">
 
-      <option value="200mm">
-        200mm
-      </option>
+<h2>📅 租借檔期</h2>
 
-      <option value="400mm">
-        400mm
-      </option>
+<div class="calendar-tabs">
 
-      <option value="手機+200mm">
-        手機 + 200mm
-      </option>
+<button
+class="active"
+onclick="changeEquipment('手機', this)"
+>
+📱 手機
+</button>
 
-      <option value="手機+400mm">
-        手機 + 400mm
-      </option>
+<button
+onclick="changeEquipment('200mm', this)"
+>
+🔭 200mm
+</button>
 
-      <option value="手機+200mm+400mm">
-        手機 + 200mm + 400mm
-      </option>
+<button
+onclick="changeEquipment('400mm', this)"
+>
+🔭 400mm
+</button>
 
-    </select>
+</div>
 
 
-    <label>
-      租借天數
-    </label>
+<div class="calendar-title">
 
-    <input
-      type="number"
-      id="calcDays"
-      min="1"
-      value="1"
-    >
+<button onclick="changeMonth(-1)">
+‹
+</button>
 
+<strong id="calendarMonth"></strong>
 
-    <div
-      id="calcResult"
-      class="result"
-    >
-      請選擇設備與天數
-    </div>
+<button onclick="changeMonth(1)">
+›
+</button>
 
-  </div>
+</div>
 
 
+<div id="calendar" class="calendar"></div>
 
-  <!-- 聯絡 -->
+<div class="legend">
+🟢 可租　🔴 已租
+</div>
 
-  <div class="card">
+</div>
 
-    <h2>
-      📩 聯絡方式
-    </h2>
 
-    <p>
-      Instagram：
-      <strong>
-        @vivo_x300_u_
-      </strong>
-    </p>
+<!-- 試算器 -->
 
-    <p>
-      如需預約租借，請先確認日曆檔期，再私訊詢問。
-    </p>
+<div class="card">
 
-  </div>
+<h2>🧮 租借費用試算</h2>
+
+
+<label>
+設備
+</label>
+
+<select id="calcEquipment">
+
+<option value="手機">
+📱 手機
+</option>
+
+<option value="200mm">
+🔭 200mm 增距鏡（單獨租，不含手柄）
+</option>
+
+<option value="400mm">
+🔭 400mm 增距鏡（單獨租，不含手柄）
+</option>
+
+<option value="手機+200mm">
+📱 手機＋200mm（含手柄）
+</option>
+
+<option value="手機+400mm">
+📱 手機＋400mm（含手柄）
+</option>
+
+<option value="手機+200mm+400mm">
+📱 手機＋200mm＋400mm（含手柄）
+</option>
+
+</select>
+
+
+<label>
+租借天數
+</label>
+
+<input
+type="number"
+id="calcDays"
+min="1"
+value="1"
+>
+
+
+<div
+id="calcResult"
+class="result"
+>
+請選擇設備與天數
+</div>
+
+
+<div class="overtime-box">
+
+<strong>⏰ 逾時收費</strong>
+
+<br><br>
+
+超時 1 小時：
+<strong>＋$100</strong>
+
+<br>
+
+超時 2～4 小時：
+<strong>每小時＋$100</strong>
+
+<br>
+
+超時 5 小時（含）以上：
+<strong>以 1 天租金計算</strong>
+
+</div>
+
+</div>
+
+
+<!-- 返圖 -->
+
+<div class="card">
+
+<h2>📸 返圖優惠</h2>
+
+<p>
+租借後提供使用設備拍攝的照片，
+下次租借可折抵 <strong>$100</strong>。
+</p>
+
+</div>
+
+
+<!-- FAQ -->
+
+<div class="card">
+
+<h2>❓ FAQ</h2>
+
+
+<div class="faq-item">
+
+<div class="faq-question">
+Q1．可以面交嗎？
+</div>
+
+<div>
+可以，提供台南／高雄面交，也可以選擇全台寄送。
+</div>
+
+</div>
+
+
+<div class="faq-item">
+
+<div class="faq-question">
+Q2．200mm 和 400mm 可以單獨租嗎？
+</div>
+
+<div>
+可以。增距鏡單獨租借為 NT$300／天，
+<strong>不含手柄</strong>。
+</div>
+
+</div>
+
+
+<div class="faq-item">
+
+<div class="faq-question">
+Q3．跟手機一起租增距鏡有包含手柄嗎？
+</div>
+
+<div>
+有。200mm 或 400mm 與手機合租時，
+增距鏡租金為 NT$200／天，<strong>含手柄</strong>。
+</div>
+
+</div>
+
+
+<div class="faq-item">
+
+<div class="faq-question">
+Q4．租 3 天以上有優惠嗎？
+</div>
+
+<div>
+有。手機租借 3 天（含）以上為
+<strong>NT$600／天</strong>。
+</div>
+
+</div>
+
+
+<div class="faq-item">
+
+<div class="faq-question">
+Q5．租 10 天以上有優惠嗎？
+</div>
+
+<div>
+有。
+
+<br>
+
+手機＋200mm／400mm：<strong>8 折</strong>
+
+<br>
+
+手機＋200mm＋400mm：<strong>7 折</strong>
+</div>
+
+</div>
+
+
+<div class="faq-item">
+
+<div class="faq-question">
+Q6．超時怎麼計算？
+</div>
+
+<div>
+超時 1 小時加收 NT$100；
+超時 5 小時（含）以上，以 1 天租金計算。
+</div>
+
+</div>
+
+
+<div class="faq-item">
+
+<div class="faq-question">
+Q7．租借後有其他優惠嗎？
+</div>
+
+<div>
+租借後提供返圖，
+下次租借可折 NT$100。
+</div>
+
+</div>
+
+
+<div class="faq-item">
+
+<div class="faq-question">
+Q8．要怎麼預約？
+</div>
+
+<div>
+請先查看租借檔期，
+確認日期可租後，再透過 Instagram 私訊詢問。
+</div>
+
+</div>
+
+</div>
+
+
+<!-- 聯絡 -->
+
+<div class="card">
+
+<h2>📩 聯絡方式</h2>
+
+<p>
+Instagram：
+<strong>
+@vivo_x300_u_
+</strong>
+</p>
+
+<p>
+如需預約租借，請先確認日曆檔期，再私訊詢問。
+</p>
+
+</div>
 
 
 </div>
 
 
-
 <footer>
 
-  VIVO X300 ULTRA 手機租借
+VIVO X300 ULTRA 手機租借
 
-  <br>
+<br>
 
-  V7｜Google Sheet 即時同步
+V8｜Google Sheet 即時同步
 
 </footer>
 
 
-
 <script>
-
 
 /* ==================================================
    Google Apps Script API
 ================================================== */
 
 const API_URL =
-  "https://script.google.com/macros/s/AKfycbxYZWULy9dAHNfcGaA4-T4r83GfzaqdcvuP7fNusVRs5mhWA6tLV09i_pJLSArg8E1V/exec";
+"https://script.google.com/macros/s/AKfycbxYZWULy9dAHNfcGaA4-T4r83GfzaqdcvuP7fNusVRs5mhWA6tLV09i_pJLSArg8E1V/exec";
 
 
 /* ==================================================
@@ -624,7 +835,7 @@ let PRICES = {};
 let currentEquipment = "手機";
 
 let currentMonth =
-  new Date(2026, 8, 1);
+new Date(2026, 8, 1);
 
 
 /* ==================================================
@@ -633,172 +844,128 @@ let currentMonth =
 
 function normalizeDate(value) {
 
-  if (!value) {
-    return "";
-  }
+if (!value) return "";
 
+const s = String(value).trim();
 
-  const s =
-    String(value).trim();
+let match =
+s.match(/^(\d{4})-(\d{1,2})-(\d{1,2})/);
 
+if (match) {
 
-  /*
-    yyyy-mm-dd
-  */
+return [
+match[1],
+String(match[2]).padStart(2,"0"),
+String(match[3]).padStart(2,"0")
+].join("-");
 
-  let match =
-    s.match(
-      /^(\d{4})-(\d{1,2})-(\d{1,2})/
-    );
+}
 
+match =
+s.match(/^(\d{4})\/(\d{1,2})\/(\d{1,2})/);
 
-  if (match) {
+if (match) {
 
-    return [
-      match[1],
-      String(match[2]).padStart(2, "0"),
-      String(match[3]).padStart(2, "0")
-    ].join("-");
+return [
+match[1],
+String(match[2]).padStart(2,"0"),
+String(match[3]).padStart(2,"0")
+].join("-");
 
-  }
+}
 
+const parsed = new Date(s);
 
-  /*
-    yyyy/mm/dd
-  */
+if (!isNaN(parsed.getTime())) {
 
-  match =
-    s.match(
-      /^(\d{4})\/(\d{1,2})\/(\d{1,2})/
-    );
+return [
+parsed.getFullYear(),
+String(parsed.getMonth()+1).padStart(2,"0"),
+String(parsed.getDate()).padStart(2,"0")
+].join("-");
 
+}
 
-  if (match) {
-
-    return [
-      match[1],
-      String(match[2]).padStart(2, "0"),
-      String(match[3]).padStart(2, "0")
-    ].join("-");
-
-  }
-
-
-  /*
-    Google Apps Script Date 字串
-  */
-
-  const parsed =
-    new Date(s);
-
-
-  if (!isNaN(parsed.getTime())) {
-
-    return [
-      parsed.getFullYear(),
-      String(
-        parsed.getMonth() + 1
-      ).padStart(2, "0"),
-      String(
-        parsed.getDate()
-      ).padStart(2, "0")
-    ].join("-");
-
-  }
-
-
-  return "";
+return "";
 
 }
 
 
 /* ==================================================
-   狀態標準化
+   狀態
 ================================================== */
 
 function normalizeStatus(value) {
 
-  const s =
-    String(value || "")
-      .trim()
-      .toLowerCase();
+const s =
+String(value || "")
+.trim()
+.toLowerCase();
 
+if (
+s.includes("已租") ||
+s.includes("租借中") ||
+s.includes("rented")
+) {
 
-  if (
-    s.includes("已租") ||
-    s.includes("租借中") ||
-    s.includes("rented")
-  ) {
+return "已租";
 
-    return "已租";
+}
 
-  }
+if (
+s.includes("可租") ||
+s.includes("available") ||
+s.includes("free")
+) {
 
+return "可租";
 
-  if (
-    s.includes("可租") ||
-    s.includes("available") ||
-    s.includes("free")
-  ) {
+}
 
-    return "可租";
-
-  }
-
-
-  /*
-    空白也視為可租
-  */
-
-  return "可租";
+return "可租";
 
 }
 
 
 /* ==================================================
-   設備名稱標準化
+   設備名稱
 ================================================== */
 
 function normalizeEquipment(value) {
 
-  const s =
-    String(value || "")
-      .trim();
+const s =
+String(value || "").trim();
 
+if (
+s === "手機" ||
+s === "VIVO X300 ULTRA" ||
+s === "VIVO X300 Ultra" ||
+s.toLowerCase() === "phone"
+) {
 
-  if (
-    s === "手機" ||
-    s === "VIVO X300 ULTRA" ||
-    s === "VIVO X300 Ultra" ||
-    s.toLowerCase() === "phone"
-  ) {
+return "手機";
 
-    return "手機";
+}
 
-  }
+if (
+s === "200mm" ||
+s === "200 mm"
+) {
 
+return "200mm";
 
-  if (
-    s === "200mm" ||
-    s === "200 mm"
-  ) {
+}
 
-    return "200mm";
+if (
+s === "400mm" ||
+s === "400 mm"
+) {
 
-  }
+return "400mm";
 
+}
 
-  if (
-    s === "400mm" ||
-    s === "400 mm"
-  ) {
-
-    return "400mm";
-
-  }
-
-
-  return s;
+return s;
 
 }
 
@@ -807,465 +974,197 @@ function normalizeEquipment(value) {
    API 資料轉換
 ================================================== */
 
-/*
-   目前 API 實際格式：
-
-   {
-     date: "2026-09-05",
-     status: "手機",
-     note: "已租"
-   }
-
-   也就是：
-
-   status = 設備
-   note   = 狀態
-
-   網站內部統一成：
-
-   {
-     date: "...",
-     equipment: "手機",
-     status: "已租",
-     note: ""
-   }
-*/
-
-
 function normalizeAvailabilityItem(item) {
 
-  if (!item) {
-    return null;
-  }
+if (!item) return null;
 
+const date =
+normalizeDate(item.date);
 
-  const date =
-    normalizeDate(item.date);
-
-
-  /*
-    如果 API 未來改成：
-
-    equipment = 設備
-    status = 狀態
-  */
-
-  if (
-    item.equipment !== undefined &&
-    item.equipment !== null
-  ) {
-
-    return {
-
-      date: date,
-
-      equipment:
-        normalizeEquipment(
-          item.equipment
-        ),
-
-      status:
-        normalizeStatus(
-          item.status
-        ),
-
-      note:
-        item.note || ""
-
-    };
-
-  }
-
-
-  /*
-    目前 API：
-
-    status = 設備
-    note = 狀態
-  */
-
-  return {
-
-    date: date,
-
-    equipment:
-      normalizeEquipment(
-        item.status
-      ),
-
-    status:
-      normalizeStatus(
-        item.note
-      ),
-
-    note: ""
-
-  };
-
-}
-
-
-/* ==================================================
-   尋找指定日期／設備
-================================================== */
-
-function findAvailability(
-  date,
-  equipment
+if (
+item.equipment !== undefined &&
+item.equipment !== null
 ) {
 
-  const targetDate =
-    normalizeDate(date);
+return {
 
+date: date,
 
-  const targetEquipment =
-    normalizeEquipment(
-      equipment
-    );
+equipment:
+normalizeEquipment(item.equipment),
 
+status:
+normalizeStatus(item.status),
 
-  return AVAILABILITY.find(
-    item => {
+note:
+item.note || ""
 
-      return (
-        normalizeDate(item.date)
-        === targetDate
+};
 
-        &&
+}
 
-        normalizeEquipment(
-          item.equipment
-        )
-        === targetEquipment
-      );
+return {
 
-    }
-  );
+date: date,
+
+equipment:
+normalizeEquipment(item.status),
+
+status:
+normalizeStatus(item.note),
+
+note: ""
+
+};
 
 }
 
 
 /* ==================================================
-   取得 API
+   尋找檔期
+================================================== */
+
+function findAvailability(date,equipment) {
+
+const targetDate =
+normalizeDate(date);
+
+const targetEquipment =
+normalizeEquipment(equipment);
+
+return AVAILABILITY.find(
+item =>
+normalizeDate(item.date) === targetDate &&
+normalizeEquipment(item.equipment) === targetEquipment
+);
+
+}
+
+
+/* ==================================================
+   讀取 Google Sheet
 ================================================== */
 
 async function loadData() {
 
-  const statusBox =
-    document.getElementById(
-      "syncStatus"
-    );
+const statusBox =
+document.getElementById("syncStatus");
 
+const debugBox =
+document.getElementById("debugBox");
 
-  const debugBox =
-    document.getElementById(
-      "debugBox"
-    );
+statusBox.className =
+"sync-status";
 
+statusBox.innerHTML =
+"⏳ 正在讀取 Google Sheet...";
 
-  statusBox.className =
-    "sync-status";
+debugBox.style.display = "none";
 
+try {
 
-  statusBox.innerHTML =
-    "⏳ 正在讀取 Google Sheet...";
+const url =
+API_URL +
+"?t=" +
+Date.now() +
+"&siteVersion=8";
 
+const response =
+await fetch(
+url,
+{
+method:"GET",
+cache:"no-store"
+}
+);
 
-  debugBox.style.display =
-    "none";
+if (!response.ok) {
 
+throw new Error(
+"HTTP " + response.status
+);
 
-  try {
+}
 
-    /*
-      加入時間戳避免瀏覽器快取
-    */
+const data =
+await response.json();
 
-    const url =
-      API_URL +
-      "?t=" +
-      Date.now() +
-      "&siteVersion=7";
+if (
+!data ||
+!Array.isArray(data.availability)
+) {
 
+throw new Error(
+"API 沒有回傳 availability 陣列"
+);
 
-    console.log(
-      "API URL：",
-      url
-    );
+}
 
+AVAILABILITY =
+data.availability
+.map(normalizeAvailabilityItem)
+.filter(
+item =>
+item &&
+item.date !== "" &&
+item.equipment !== ""
+);
 
-    const response =
-      await fetch(
-        url,
-        {
-          method: "GET",
-          cache: "no-store"
-        }
-      );
+if (
+data.prices &&
+typeof data.prices === "object"
+) {
 
+PRICES = data.prices;
 
-    console.log(
-      "HTTP 狀態：",
-      response.status
-    );
+} else {
 
+PRICES = {};
 
-    if (!response.ok) {
+}
 
-      throw new Error(
-        "HTTP " +
-        response.status
-      );
+updatePrices();
 
-    }
+renderCalendar();
 
+calculatePrice();
 
-    const data =
-      await response.json();
+statusBox.className =
+"sync-status sync-ok";
 
+statusBox.innerHTML =
+"✅ Google Sheet 同步成功<br>" +
+"📅 檔期資料：" +
+AVAILABILITY.length +
+" 筆<br>" +
+"💰 價格資料已同步<br>" +
+"🟢 可租　🔴 已租<br>" +
+"Website V8";
 
-    console.log(
-      "Google Sheet API 原始資料：",
-      data
-    );
+debugBox.innerHTML =
+"API Version：" +
+(data.apiVersion || "未提供") +
+"<br>" +
+"API availability：" +
+data.availability.length +
+"<br>" +
+"網站整理後：" +
+AVAILABILITY.length;
 
+} catch(error) {
 
-    /*
-      ★★★ 最重要的修正 ★★★
+console.error(error);
 
-      不檢查：
+statusBox.className =
+"sync-status sync-error";
 
-      data.success
+statusBox.innerHTML =
+"❌ Google Sheet 載入失敗<br>" +
+"<small>" +
+error.message +
+"</small>";
 
-      因為目前 API 根本沒有
-      success 欄位。
-
-      只確認 availability
-      是否為陣列。
-    */
-
-    if (
-      !data ||
-      !Array.isArray(
-        data.availability
-      )
-    ) {
-
-      throw new Error(
-        "API 沒有回傳 availability 陣列"
-      );
-
-    }
-
-
-    /*
-      轉換檔期資料
-    */
-
-    AVAILABILITY =
-      data.availability
-        .map(
-          normalizeAvailabilityItem
-        )
-        .filter(
-          item => {
-
-            return (
-              item !== null &&
-
-              item.date !== "" &&
-
-              item.equipment !== ""
-            );
-
-          }
-        );
-
-
-    /*
-      價格資料
-
-      如果 API 有 prices 就使用。
-
-      沒有的話使用預設價格。
-    */
-
-    if (
-      data.prices &&
-      typeof data.prices === "object"
-    ) {
-
-      PRICES =
-        data.prices;
-
-    } else {
-
-      PRICES = {};
-
-    }
-
-
-    /*
-      更新價格
-    */
-
-    updatePrices();
-
-
-    /*
-      更新日曆
-    */
-
-    renderCalendar();
-
-
-    /*
-      更新試算
-    */
-
-    calculatePrice();
-
-
-    /*
-      顯示成功
-    */
-
-    statusBox.className =
-      "sync-status sync-ok";
-
-
-    let priceText =
-      "API 未提供價格資料";
-
-
-    if (
-      Object.keys(PRICES).length > 0
-    ) {
-
-      priceText =
-        "已更新";
-
-    }
-
-
-    statusBox.innerHTML =
-      "✅ Google Sheet 同步成功<br>" +
-
-      "📅 檔期資料：" +
-      AVAILABILITY.length +
-      " 筆<br>" +
-
-      "💰 價格：" +
-      priceText +
-      "<br>" +
-
-      "🟢 可租　🔴 已租<br>" +
-
-      "Website V7";
-
-
-    /*
-      Debug 資訊
-
-      方便確認 API 是否真的更新。
-    */
-
-    debugBox.innerHTML =
-      "API Version：" +
-      (
-        data.apiVersion ||
-        "未提供"
-      ) +
-
-      "<br>" +
-
-      "API availability：" +
-      data.availability.length +
-
-      "<br>" +
-
-      "網站整理後：" +
-      AVAILABILITY.length;
-
-
-    console.log(
-      "API availability 筆數：",
-      data.availability.length
-    );
-
-
-    console.log(
-      "網站整理後筆數：",
-      AVAILABILITY.length
-    );
-
-
-    /*
-      找 9/5 測試資料
-    */
-
-    const testPhone =
-      findAvailability(
-        "2026-09-05",
-        "手機"
-      );
-
-
-    const test200 =
-      findAvailability(
-        "2026-09-05",
-        "200mm"
-      );
-
-
-    const test400 =
-      findAvailability(
-        "2026-09-05",
-        "400mm"
-      );
-
-
-    console.log(
-      "2026-09-05 手機：",
-      testPhone
-    );
-
-
-    console.log(
-      "2026-09-05 200mm：",
-      test200
-    );
-
-
-    console.log(
-      "2026-09-05 400mm：",
-      test400
-    );
-
-
-  } catch (error) {
-
-    console.error(
-      "Google Sheet API 錯誤：",
-      error
-    );
-
-
-    statusBox.className =
-      "sync-status sync-error";
-
-
-    statusBox.innerHTML =
-      "❌ Google Sheet 載入失敗<br>" +
-
-      "<small>" +
-
-      error.message +
-
-      "</small>";
-
-
-  }
+}
 
 }
 
@@ -1274,568 +1173,465 @@ async function loadData() {
    價格
 ================================================== */
 
-function getPrice(
-  key,
-  fallback
+function getPrice(key,fallback) {
+
+let value =
+PRICES[key];
+
+if (typeof value === "string") {
+
+value =
+value.replace(/[^\d.-]/g,"");
+
+}
+
+const number =
+Number(value);
+
+if (
+!isNaN(number) &&
+number > 0
 ) {
 
-  /*
-    直接讀取 API price
+return number;
 
-    支援：
+}
 
-    700
-    "700"
-    NT$700
-  */
+return fallback;
 
-  let value =
-    PRICES[key];
+}
 
 
-  if (
-    typeof value === "string"
-  ) {
+/* 手機 */
 
-    value =
-      value.replace(
-        /[^\d.-]/g,
-        ""
-      );
+function getPhoneDailyPrice(days) {
 
-  }
+if (days >= 3) {
 
+return getPrice(
+"phone3Daily",
+600
+);
 
-  const number =
-    Number(value);
+}
 
+return getPrice(
+"phoneDaily",
+700
+);
 
-  if (
-    !isNaN(number) &&
-    number > 0
-  ) {
-
-    return number;
-
-  }
+}
 
 
-  return fallback;
+/* 增距鏡＋手機 */
+
+function getLensWithPhoneDaily() {
+
+return getPrice(
+"lensWithPhoneDaily",
+200
+);
+
+}
+
+
+/* 增距鏡單獨 */
+
+function getLensAloneDaily() {
+
+return getPrice(
+"lensAloneDaily",
+300
+);
 
 }
 
 
 function money(value) {
 
-  return (
-    "NT$" +
-    Number(value)
-      .toLocaleString(
-        "zh-TW"
-      )
-  );
+return (
+"NT$" +
+Number(value).toLocaleString("zh-TW")
+);
 
 }
 
 
 function updatePrices() {
 
-  const phone =
-    getPrice(
-      "phoneDaily",
-      700
-    );
+document.getElementById(
+"phonePrice"
+).innerText =
+money(
+getPrice("phoneDaily",700)
+);
 
+document.getElementById(
+"lensWithPhonePrice"
+).innerText =
+money(
+getPrice("lensWithPhoneDaily",200)
+);
 
-  const lens200 =
-    getPrice(
-      "lens200Daily",
-      300
-    );
-
-
-  const lens400 =
-    getPrice(
-      "lens400Daily",
-      300
-    );
-
-
-  document.getElementById(
-    "phonePrice"
-  ).innerText =
-    money(phone);
-
-
-  document.getElementById(
-    "lens200Price"
-  ).innerText =
-    money(lens200);
-
-
-  document.getElementById(
-    "lens400Price"
-  ).innerText =
-    money(lens400);
+document.getElementById(
+"lensAlonePrice"
+).innerText =
+money(
+getPrice("lensAloneDaily",300)
+);
 
 }
 
 
 /* ==================================================
-   切換設備
+   日曆
 ================================================== */
 
-function changeEquipment(
-  equipment,
-  button
-) {
+function changeEquipment(equipment,button) {
 
-  currentEquipment =
-    normalizeEquipment(
-      equipment
-    );
+currentEquipment =
+normalizeEquipment(equipment);
 
+document
+.querySelectorAll(".calendar-tabs button")
+.forEach(btn =>
+btn.classList.remove("active")
+);
 
-  document
-    .querySelectorAll(
-      ".calendar-tabs button"
-    )
-    .forEach(
-      btn => {
+button.classList.add("active");
 
-        btn.classList.remove(
-          "active"
-        );
-
-      }
-    );
-
-
-  button.classList.add(
-    "active"
-  );
-
-
-  renderCalendar();
+renderCalendar();
 
 }
 
 
-/* ==================================================
-   切換月份
-================================================== */
+function changeMonth(offset) {
 
-function changeMonth(
-  offset
-) {
+currentMonth =
+new Date(
+currentMonth.getFullYear(),
+currentMonth.getMonth()+offset,
+1
+);
 
-  currentMonth =
-    new Date(
-      currentMonth.getFullYear(),
-      currentMonth.getMonth() +
-        offset,
-      1
-    );
-
-
-  renderCalendar();
+renderCalendar();
 
 }
 
-
-/* ==================================================
-   月曆
-================================================== */
 
 function renderCalendar() {
 
-  const calendar =
-    document.getElementById(
-      "calendar"
-    );
+const calendar =
+document.getElementById("calendar");
 
+const title =
+document.getElementById("calendarMonth");
 
-  const title =
-    document.getElementById(
-      "calendarMonth"
-    );
+const year =
+currentMonth.getFullYear();
 
+const month =
+currentMonth.getMonth();
 
-  const year =
-    currentMonth.getFullYear();
+title.innerText =
+year +
+" 年 " +
+(month+1) +
+" 月";
 
+calendar.innerHTML = "";
 
-  const month =
-    currentMonth.getMonth();
+const weekdays =
+["日","一","二","三","四","五","六"];
 
+weekdays.forEach(day => {
 
-  title.innerText =
-    year +
-    " 年 " +
-    (month + 1) +
-    " 月";
+const el =
+document.createElement("div");
 
+el.className = "weekday";
 
-  calendar.innerHTML =
-    "";
+el.innerText = day;
 
+calendar.appendChild(el);
 
-  const weekdays =
-    [
-      "日",
-      "一",
-      "二",
-      "三",
-      "四",
-      "五",
-      "六"
-    ];
+});
 
+const firstDay =
+new Date(year,month,1).getDay();
 
-  weekdays.forEach(
-    day => {
+for (
+let i=0;
+i<firstDay;
+i++
+) {
 
-      const el =
-        document.createElement(
-          "div"
-        );
+const empty =
+document.createElement("div");
 
+empty.className =
+"day empty";
 
-      el.className =
-        "weekday";
+calendar.appendChild(empty);
 
+}
 
-      el.innerText =
-        day;
+const daysInMonth =
+new Date(
+year,
+month+1,
+0
+).getDate();
 
+for (
+let day=1;
+day<=daysInMonth;
+day++
+) {
 
-      calendar.appendChild(
-        el
-      );
+const cell =
+document.createElement("div");
 
-    }
-  );
+cell.className = "day";
 
+const date =
+[
+year,
+String(month+1).padStart(2,"0"),
+String(day).padStart(2,"0")
+].join("-");
 
-  /*
-    當月第一天星期幾
-  */
+const number =
+document.createElement("div");
 
-  const firstDay =
-    new Date(
-      year,
-      month,
-      1
-    ).getDay();
+number.className =
+"day-number";
 
+number.innerText = day;
 
-  /*
-    前面的空格
-  */
+cell.appendChild(number);
 
-  for (
-    let i = 0;
-    i < firstDay;
-    i++
-  ) {
+const item =
+findAvailability(
+date,
+currentEquipment
+);
 
-    const empty =
-      document.createElement(
-        "div"
-      );
+if (item) {
 
+const status =
+normalizeStatus(item.status);
 
-    empty.className =
-      "day empty";
+const statusEl =
+document.createElement("div");
 
+if (status === "已租") {
 
-    calendar.appendChild(
-      empty
-    );
+statusEl.innerText =
+"🔴 已租";
 
-  }
+statusEl.className =
+"rented";
 
+} else {
 
-  /*
-    當月天數
-  */
+statusEl.innerText =
+"🟢 可租";
 
-  const daysInMonth =
-    new Date(
-      year,
-      month + 1,
-      0
-    ).getDate();
+statusEl.className =
+"available";
 
+}
 
-  /*
-    建立每天
-  */
+cell.appendChild(statusEl);
 
-  for (
-    let day = 1;
-    day <= daysInMonth;
-    day++
-  ) {
+}
 
-    const cell =
-      document.createElement(
-        "div"
-      );
+calendar.appendChild(cell);
 
-
-    cell.className =
-      "day";
-
-
-    /*
-      yyyy-mm-dd
-    */
-
-    const date =
-      [
-        year,
-
-        String(
-          month + 1
-        ).padStart(
-          2,
-          "0"
-        ),
-
-        String(day)
-          .padStart(
-            2,
-            "0"
-          )
-
-      ].join("-");
-
-
-    /*
-      日期數字
-    */
-
-    const number =
-      document.createElement(
-        "div"
-      );
-
-
-    number.className =
-      "day-number";
-
-
-    number.innerText =
-      day;
-
-
-    cell.appendChild(
-      number
-    );
-
-
-    /*
-      找 Google Sheet 檔期
-    */
-
-    const item =
-      findAvailability(
-        date,
-        currentEquipment
-      );
-
-
-    if (item) {
-
-      const status =
-        normalizeStatus(
-          item.status
-        );
-
-
-      const statusEl =
-        document.createElement(
-          "div"
-        );
-
-
-      if (
-        status === "已租"
-      ) {
-
-        statusEl.innerText =
-          "🔴 已租";
-
-
-        statusEl.className =
-          "rented";
-
-      } else {
-
-        statusEl.innerText =
-          "🟢 可租";
-
-
-        statusEl.className =
-          "available";
-
-      }
-
-
-      cell.appendChild(
-        statusEl
-      );
-
-    }
-
-
-    calendar.appendChild(
-      cell
-    );
-
-  }
+}
 
 }
 
 
 /* ==================================================
-   租金試算
+   試算器
 ================================================== */
 
-function getEquipmentPrice(
-  equipment
-) {
+function calculatePrice() {
 
-  const phone =
-    getPrice(
-      "phoneDaily",
-      700
-    );
+const equipment =
+document.getElementById(
+"calcEquipment"
+).value;
 
+const days =
+Math.max(
+1,
+Number(
+document.getElementById(
+"calcDays"
+).value
+) || 1
+);
 
-  const lens200 =
-    getPrice(
-      "lens200Daily",
-      300
-    );
+const phone =
+getPhoneDailyPrice(days);
 
+const lensWithPhone =
+getLensWithPhoneDaily();
 
-  const lens400 =
-    getPrice(
-      "lens400Daily",
-      300
-    );
+const lensAlone =
+getLensAloneDaily();
 
+let daily = 0;
 
-  switch (
-    equipment
-  ) {
+let discount = 1;
 
-    case "手機":
-
-      return phone;
-
-
-    case "200mm":
-
-      return lens200;
+let description = "";
 
 
-    case "400mm":
+/* 手機 */
 
-      return lens400;
+if (equipment === "手機") {
 
+daily = phone;
 
-    case "手機+200mm":
-
-      return (
-        phone +
-        lens200
-      );
-
-
-    case "手機+400mm":
-
-      return (
-        phone +
-        lens400
-      );
-
-
-    case "手機+200mm+400mm":
-
-      return (
-        phone +
-        lens200 +
-        lens400
-      );
-
-
-    default:
-
-      return 0;
-
-  }
+description =
+"📱 手機";
 
 }
 
 
-function calculatePrice() {
+/* 單租 200mm */
 
-  const equipment =
-    document.getElementById(
-      "calcEquipment"
-    ).value;
+else if (equipment === "200mm") {
 
+daily = lensAlone;
 
-  const days =
-    Math.max(
-      1,
+description =
+"🔭 200mm 增距鏡（不含手柄）";
 
-      Number(
-        document.getElementById(
-          "calcDays"
-        ).value
-      ) || 1
-    );
+}
 
 
-  const daily =
-    getEquipmentPrice(
-      equipment
-    );
+/* 單租 400mm */
+
+else if (equipment === "400mm") {
+
+daily = lensAlone;
+
+description =
+"🔭 400mm 增距鏡（不含手柄）";
+
+}
 
 
-  const total =
-    daily * days;
+/* 手機＋200 */
+
+else if (equipment === "手機+200mm") {
+
+daily =
+phone +
+lensWithPhone;
+
+description =
+"📱 手機＋🔭 200mm（含手柄）";
+
+if (days >= 10) {
+
+discount = 0.8;
+
+}
+
+}
 
 
-  document.getElementById(
-    "calcResult"
-  ).innerHTML =
+/* 手機＋400 */
 
-    "設備：<strong>" +
+else if (equipment === "手機+400mm") {
 
-    equipment +
+daily =
+phone +
+lensWithPhone;
 
-    "</strong><br>" +
+description =
+"📱 手機＋🔭 400mm（含手柄）";
 
-    "每日：<strong>" +
+if (days >= 10) {
 
-    money(daily) +
+discount = 0.8;
 
-    "</strong><br>" +
+}
 
-    "租借 " +
+}
 
-    days +
 
-    " 天：<strong>" +
+/* 三件組 */
 
-    money(total) +
+else if (
+equipment ===
+"手機+200mm+400mm"
+) {
 
-    "</strong>";
+daily =
+phone +
+lensWithPhone +
+lensWithPhone;
+
+description =
+"📱 手機＋🔭 200mm＋🔭 400mm（含手柄）";
+
+if (days >= 10) {
+
+discount = 0.7;
+
+}
+
+}
+
+
+const originalTotal =
+daily * days;
+
+const finalTotal =
+Math.round(
+originalTotal * discount
+);
+
+let discountText = "";
+
+if (discount < 1) {
+
+discountText =
+"<br>" +
+"長租優惠：" +
+(discount === 0.7 ? "7 折" : "8 折") +
+"<br>" +
+"折扣後：<strong>" +
+money(finalTotal) +
+"</strong>";
+
+}
+
+document.getElementById(
+"calcResult"
+).innerHTML =
+
+"設備：<strong>" +
+description +
+"</strong><br>" +
+
+"每日：<strong>" +
+money(daily) +
+"</strong><br>" +
+
+"原價：" +
+"<strong>" +
+money(originalTotal) +
+"</strong>" +
+
+discountText;
 
 }
 
@@ -1845,23 +1641,18 @@ function calculatePrice() {
 ================================================== */
 
 document
-  .getElementById(
-    "calcEquipment"
-  )
-  .addEventListener(
-    "change",
-    calculatePrice
-  );
-
+.getElementById("calcEquipment")
+.addEventListener(
+"change",
+calculatePrice
+);
 
 document
-  .getElementById(
-    "calcDays"
-  )
-  .addEventListener(
-    "input",
-    calculatePrice
-  );
+.getElementById("calcDays")
+.addEventListener(
+"input",
+calculatePrice
+);
 
 
 /* ==================================================
@@ -1873,7 +1664,6 @@ renderCalendar();
 calculatePrice();
 
 loadData();
-
 
 </script>
 
