@@ -2,7 +2,6 @@
 <html lang="zh-Hant">
 <head>
 <meta charset="UTF-8">
-  
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>VIVO X300 ULTRA｜手機租借</title>
@@ -27,7 +26,7 @@ body {
   background:
     radial-gradient(circle at top, #202020 0%, #0d0d0d 42%, #050505 100%);
   color: #f5f5f5;
-  line-height: 1.7;
+  line-height: 1.6;
 }
 
 a {
@@ -36,7 +35,7 @@ a {
 }
 
 .container {
-  width: min(1100px, 92%);
+  width: min(1050px, 92%);
   margin: auto;
 }
 
@@ -45,48 +44,55 @@ a {
 ========================= */
 
 header {
-  padding: 70px 0 45px;
+  padding: 38px 0 22px;
   text-align: center;
 }
 
 .logo {
-  font-size: clamp(28px, 7vw, 52px);
+  font-size: clamp(26px, 7vw, 48px);
   font-weight: 800;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
 }
 
 .hero-title {
-  margin-top: 18px;
-  font-size: clamp(28px, 6vw, 48px);
+  margin-top: 6px;
+  font-size: clamp(24px, 6vw, 42px);
   font-weight: 800;
 }
 
+.shipping-note {
+  margin: 10px auto 0;
+  color: #ddd;
+  font-size: 14px;
+}
+
 .hero-sub {
-  margin: 15px auto 0;
-  color: #bdbdbd;
-  max-width: 650px;
+  margin: 5px auto 0;
+  color: #999;
+  font-size: 14px;
 }
 
 .badges {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 25px;
+  gap: 6px;
+  margin-top: 14px;
 }
 
 .badge {
-  padding: 8px 14px;
-  border: 1px solid #444;
+  padding: 5px 10px;
+  border: 1px solid #383838;
   border-radius: 999px;
-  background: rgba(255,255,255,.04);
-  font-size: 14px;
+  background: rgba(255,255,255,.035);
+  font-size: 12px;
+  color: #ccc;
 }
 
 .version {
-  margin-top: 18px;
-  color: #777;
-  font-size: 12px;
+  margin-top: 10px;
+  color: #666;
+  font-size: 11px;
 }
 
 /* =========================
@@ -94,20 +100,25 @@ header {
 ========================= */
 
 .card {
-  margin: 22px 0;
-  padding: 24px;
+  margin: 12px 0;
+  padding: 17px;
   border: 1px solid #292929;
-  border-radius: 20px;
-  background: rgba(20,20,20,.85);
-  box-shadow: 0 10px 35px rgba(0,0,0,.25);
+  border-radius: 16px;
+  background: rgba(20,20,20,.88);
+  box-shadow: 0 7px 25px rgba(0,0,0,.2);
 }
 
 .card h2 {
-  margin-top: 0;
+  margin: 0 0 12px;
+  font-size: 19px;
+}
+
+.card h3 {
+  margin: 5px 0;
 }
 
 .muted {
-  color: #aaa;
+  color: #999;
 }
 
 /* =========================
@@ -116,16 +127,22 @@ header {
 
 .sync-card {
   text-align: center;
+  padding: 12px 17px;
+}
+
+.sync-card h2 {
+  display: inline;
+  margin-right: 8px;
 }
 
 .sync-status {
   display: inline-block;
-  margin-top: 8px;
-  padding: 6px 12px;
+  margin-top: 5px;
+  padding: 4px 10px;
   border-radius: 999px;
   background: #1c3d28;
   color: #8ff0aa;
-  font-size: 13px;
+  font-size: 12px;
 }
 
 .sync-status.error {
@@ -134,48 +151,86 @@ header {
 }
 
 /* =========================
-   Grid
+   Equipment
 ========================= */
 
 .grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 18px;
+  gap: 10px;
 }
 
 .equipment {
-  padding: 22px;
-  border-radius: 18px;
+  padding: 14px;
+  border-radius: 14px;
   border: 1px solid #292929;
   background: #111;
 }
 
-.equipment h3 {
-  margin-top: 0;
-  font-size: 21px;
+.equipment-icon {
+  font-size: 27px;
 }
 
-.equipment-icon {
-  font-size: 38px;
+.equipment h3 {
+  font-size: 16px;
+  margin: 3px 0;
 }
+
+.equipment p {
+  margin: 3px 0;
+  font-size: 12px;
+}
+
+/* =========================
+   Price
+========================= */
 
 .price-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 18px;
+  gap: 10px;
 }
 
 .price-box {
-  padding: 22px;
-  border-radius: 18px;
+  padding: 14px;
+  border-radius: 14px;
   background: #111;
   border: 1px solid #292929;
 }
 
+.price-box h3 {
+  font-size: 15px;
+  margin: 0 0 4px;
+}
+
 .price {
-  font-size: 28px;
+  font-size: 22px;
   font-weight: 800;
-  margin: 8px 0;
+  margin: 2px 0 4px;
+}
+
+.price-box div:not(.price) {
+  font-size: 12px;
+  color: #aaa;
+  margin: 2px 0;
+}
+
+/* =========================
+   Highlight
+========================= */
+
+.highlight {
+  margin-top: 10px;
+  padding: 10px 12px;
+  border-radius: 11px;
+  background: #171717;
+  border: 1px solid #303030;
+  color: #ddd;
+  font-size: 13px;
+}
+
+.highlight strong {
+  color: #fff;
 }
 
 /* =========================
@@ -184,18 +239,19 @@ header {
 
 .calendar-tabs {
   display: flex;
-  gap: 8px;
+  gap: 6px;
   flex-wrap: wrap;
-  margin-bottom: 18px;
+  margin-bottom: 10px;
 }
 
 .calendar-tab {
   border: 1px solid #444;
   background: #151515;
   color: #ddd;
-  padding: 9px 14px;
+  padding: 7px 11px;
   border-radius: 999px;
   cursor: pointer;
+  font-size: 12px;
 }
 
 .calendar-tab.active {
@@ -207,20 +263,23 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 18px;
+  margin-bottom: 9px;
 }
 
 .calendar-header button {
+  width: 34px;
+  height: 32px;
   border: 1px solid #444;
   background: #151515;
   color: white;
-  border-radius: 10px;
-  padding: 8px 14px;
+  border-radius: 9px;
   cursor: pointer;
+  font-size: 20px;
+  line-height: 1;
 }
 
 .month-title {
-  font-size: 20px;
+  font-size: 17px;
   font-weight: 700;
 }
 
@@ -228,39 +287,39 @@ header {
 .calendar {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
-  gap: 6px;
+  gap: 4px;
 }
 
 .weekdays div {
   text-align: center;
-  color: #888;
-  font-size: 13px;
-  padding: 5px;
+  color: #777;
+  font-size: 11px;
+  padding: 2px;
 }
 
 .day {
-  min-height: 82px;
-  padding: 8px;
-  border-radius: 12px;
+  min-height: 58px;
+  padding: 5px;
+  border-radius: 9px;
   border: 1px solid #292929;
   background: #101010;
   position: relative;
 }
 
 .day.empty {
-  opacity: .15;
+  opacity: .12;
 }
 
 .day-number {
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 700;
 }
 
 .day-status {
-  margin-top: 8px;
-  padding: 4px 5px;
-  border-radius: 7px;
-  font-size: 11px;
+  margin-top: 4px;
+  padding: 2px 1px;
+  border-radius: 5px;
+  font-size: 9px;
   text-align: center;
 }
 
@@ -286,22 +345,22 @@ header {
 
 .legend {
   display: flex;
-  gap: 15px;
+  gap: 12px;
   flex-wrap: wrap;
-  margin-top: 18px;
-  color: #aaa;
-  font-size: 13px;
+  margin-top: 10px;
+  color: #999;
+  font-size: 11px;
 }
 
 .legend span {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
+  gap: 5px;
 }
 
 .dot {
-  width: 10px;
-  height: 10px;
+  width: 8px;
+  height: 8px;
   border-radius: 50%;
   display: inline-block;
 }
@@ -327,78 +386,108 @@ header {
 }
 
 .form-row {
-  margin-bottom: 18px;
+  margin-bottom: 10px;
 }
 
 label {
   display: block;
-  margin-bottom: 7px;
-  color: #bbb;
-  font-size: 14px;
+  margin-bottom: 5px;
+  color: #aaa;
+  font-size: 12px;
 }
 
 select,
 input {
   width: 100%;
-  padding: 13px 14px;
-  border-radius: 12px;
+  padding: 10px 12px;
+  border-radius: 10px;
   border: 1px solid #3a3a3a;
   background: #080808;
   color: white;
-  font-size: 16px;
+  font-size: 14px;
 }
 
 .result {
-  margin-top: 20px;
-  padding: 20px;
-  border-radius: 15px;
+  margin-top: 10px;
+  padding: 12px;
+  border-radius: 12px;
   background: #181818;
   border: 1px solid #333;
 }
 
+.result-label {
+  font-size: 12px;
+  color: #aaa;
+}
+
 .total {
-  font-size: 34px;
+  font-size: 29px;
   font-weight: 800;
+  line-height: 1.2;
+  margin: 2px 0;
 }
 
 .calculator-note {
   color: #999;
-  font-size: 13px;
-  margin-top: 10px;
+  font-size: 11px;
 }
 
 /* =========================
    FAQ
 ========================= */
 
-.faq-item {
-  padding: 17px 0;
+details {
   border-bottom: 1px solid #292929;
 }
 
-.faq-item:last-child {
+details:last-child {
   border-bottom: none;
 }
 
-.faq-question {
-  font-weight: 700;
-  margin-bottom: 8px;
+summary {
+  padding: 10px 0;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+details p {
+  margin: 0 0 10px;
+  color: #999;
+  font-size: 12px;
 }
 
 /* =========================
    Contact
 ========================= */
 
+.contact-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.contact-box {
+  flex: 1;
+  min-width: 180px;
+  padding: 11px 13px;
+  border-radius: 11px;
+  background: #111;
+  border: 1px solid #292929;
+  font-size: 13px;
+}
+
 .contact-link {
   color: #fff;
   text-decoration: underline;
-  text-underline-offset: 4px;
+  text-underline-offset: 3px;
 }
 
 .warning {
-  display: inline-block;
-  margin-top: 8px;
+  display: block;
+  margin-top: 7px;
   color: #ffcc77;
+  font-size: 11px;
 }
 
 /* =========================
@@ -407,52 +496,116 @@ input {
 
 footer {
   text-align: center;
-  padding: 45px 0 60px;
+  padding: 25px 0 35px;
   color: #666;
-  font-size: 13px;
+  font-size: 11px;
 }
 
 /* =========================
-   Responsive
+   Mobile
 ========================= */
 
 @media (max-width: 700px) {
 
   header {
-    padding-top: 45px;
+    padding: 30px 0 18px;
   }
+
+  .container {
+    width: 94%;
+  }
+
+  .card {
+    padding: 14px;
+    margin: 9px 0;
+  }
+
+  .card h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  .grid,
+  .price-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+
+  .equipment {
+    padding: 11px;
+  }
+
+  .equipment h3 {
+    font-size: 14px;
+  }
+
+  .equipment p {
+    font-size: 11px;
+  }
+
+  .price-box {
+    padding: 11px;
+  }
+
+  .price-box h3 {
+    font-size: 13px;
+  }
+
+  .price {
+    font-size: 20px;
+  }
+
+  .price-box div:not(.price) {
+    font-size: 11px;
+  }
+
+  .day {
+    min-height: 52px;
+    padding: 4px;
+  }
+
+  .day-status {
+    font-size: 8px;
+  }
+
+  .calendar-tabs {
+    gap: 5px;
+  }
+
+  .calendar-tab {
+    padding: 6px 9px;
+  }
+
+  .contact-box {
+    min-width: 100%;
+  }
+}
+
+/* 超小螢幕 */
+@media (max-width: 380px) {
 
   .grid,
   .price-grid {
     grid-template-columns: 1fr;
   }
 
-  .calendar {
-    gap: 4px;
+  .logo {
+    font-size: 25px;
   }
 
-  .day {
-    min-height: 70px;
-    padding: 5px;
+  .hero-title {
+    font-size: 24px;
   }
 
-  .day-status {
-    font-size: 9px;
-    padding: 3px 2px;
-  }
-
-  .calendar-header {
-    gap: 10px;
-  }
-
-  .month-title {
-    font-size: 17px;
-  }
 }
 </style>
 </head>
 
 <body>
+
+<!-- =========================
+     Header
+========================= -->
 
 <header>
   <div class="container">
@@ -465,23 +618,25 @@ footer {
       把舞台，拉近一點。
     </div>
 
- <div class="shipping-note">
-  📦 全台寄送<br>
-  ✦ 租借 4 日（含）以上賣貨便免運 ✦
-</div>
+    <div class="shipping-note">
+      📦 全台寄送
+      <br>
+      ✦ 租借 4 日（含）以上賣貨便免運 ✦
+    </div>
+
+    <div class="hero-sub">
       演唱會・活動・追星攝影專用
-    </p>
+    </div>
 
     <div class="badges">
       <span class="badge">📸 演唱會拍攝</span>
-      <span class="badge">🔭 200mm／400mm 超長焦</span>
+      <span class="badge">🔭 200mm／400mm</span>
       <span class="badge">💰 長租優惠</span>
-      <span class="badge">📦 全台寄送</span>
       <span class="badge">⌚ Apple Watch 錄音</span>
     </div>
 
     <div class="version">
-      Website V9｜2026-09-25
+      Website V10｜2026-09-25
     </div>
 
   </div>
@@ -491,16 +646,12 @@ footer {
 <main class="container">
 
 <!-- =========================
-     Google Sheet Sync
+     Sync
 ========================= -->
 
 <div class="card sync-card">
 
-  <h2>📊 檔期即時同步</h2>
-
-  <p class="muted">
-    以下檔期會從 Google Sheet 自動讀取。
-  </p>
+  <h2>📊 檔期</h2>
 
   <div id="syncStatus" class="sync-status">
     載入中…
@@ -525,16 +676,12 @@ footer {
 
       <h3>VIVO X300 ULTRA</h3>
 
-      <p>
-        演唱會、活動、追星攝影專用。
-      </p>
-
       <p class="muted">
         16GB＋1TB｜火山黑
       </p>
 
       <p class="muted">
-        原廠充電器、原廠手機殼＋鏡頭裝飾環、收納袋
+        原廠配件＋收納袋
       </p>
 
     </div>
@@ -546,16 +693,12 @@ footer {
 
       <h3>200mm 增距鏡</h3>
 
-      <p>
-        適合演唱會、簽售等需要拉近距離的場合。
+      <p class="muted">
+        合租含手柄＋轉接環
       </p>
 
       <p class="muted">
-        與手機合租：含手柄＋鏡頭轉接環
-      </p>
-
-      <p class="muted">
-        單獨租借：不含手柄
+        單租不含手柄
       </p>
 
     </div>
@@ -567,16 +710,12 @@ footer {
 
       <h3>400mm 增距鏡</h3>
 
-      <p>
-        更遠距離拍攝使用。
+      <p class="muted">
+        合租含手柄＋轉接環
       </p>
 
       <p class="muted">
-        與手機合租：含手柄＋鏡頭轉接環
-      </p>
-
-      <p class="muted">
-        單獨租借：不含手柄
+        單租不含手柄
       </p>
 
     </div>
@@ -588,24 +727,12 @@ footer {
 
       <h3>Apple Watch S10</h3>
 
-      <p>
-        可用於簽售／演唱會錄音。
+      <p class="muted">
+        GPS 46mm｜玫瑰金
       </p>
 
       <p class="muted">
-        Apple Watch S10 GPS 46mm｜玫瑰金
-      </p>
-
-      <p class="muted">
-        配件：手錶、錶帶、原廠充電線
-      </p>
-
-      <p class="muted">
-        📱 與 VIVO 手機合租：NT$40／天
-      </p>
-
-      <p class="muted">
-        ⌚ 單獨租借：NT$60／天
+        簽售／演唱會錄音
       </p>
 
     </div>
@@ -629,16 +756,19 @@ footer {
 
       <h3>📱 VIVO X300 ULTRA</h3>
 
-      <div class="price">
+      <div
+        id="displayPhonePrice"
+        class="price">
         NT$700／天
       </div>
 
       <div>
-        1～2 天：NT$700／天
+        1～2 天：<span id="displayPhoneDaily">NT$700</span>／天
       </div>
 
       <div>
-        3 天（含）以上：NT$600／天
+        3 天（含）以上：
+        <span id="displayPhone3Daily">NT$600</span>／天
       </div>
 
     </div>
@@ -657,7 +787,7 @@ footer {
       </div>
 
       <div>
-        含手柄＋鏡頭轉接環
+        含手柄＋轉接環
       </div>
 
     </div>
@@ -686,17 +816,28 @@ footer {
 
       <h3>⌚ Apple Watch S10</h3>
 
-      <div class="price">
+      <div
+        id="displayWatchPrice"
+        class="price">
         NT$60／天
       </div>
 
       <div>
-        單獨租借：NT$60／天
+        單租：<span id="displayWatchSolo">NT$60</span>／天
       </div>
 
       <div>
-        📱 與手機合租：NT$40／天
+        合租：<span id="displayWatchCo">NT$40</span>／天
       </div>
+
+    </div>
+
+  </div>
+
+  <div class="highlight">
+    📦 <strong>租借 4 日（含）以上</strong>：
+    賣貨便免運
+  </div>
 
 </div>
 
@@ -709,19 +850,21 @@ footer {
 
   <h2>⟡ 長租優惠 ⟡</h2>
 
-  <p>
+  <div class="highlight">
+
     🗓️ <strong>10 天（含）以上</strong>
-  </p>
 
-  <p>
-    📱 手機＋200mm／400mm其中一顆
+    <br>
+
+    📱 手機＋200mm／400mm 其中一顆
     ➜ <strong>整組 8 折</strong>
-  </p>
 
-  <p>
+    <br>
+
     📱 手機＋200mm＋400mm
     ➜ <strong>整組 7 折</strong>
-  </p>
+
+  </div>
 
 </div>
 
@@ -761,7 +904,7 @@ footer {
       class="calendar-tab"
       data-equipment="Apple Watch"
       onclick="switchEquipment('Apple Watch', this)">
-      ⌚ Apple Watch
+      ⌚ Watch
     </button>
 
   </div>
@@ -888,7 +1031,7 @@ footer {
 
   <div class="result">
 
-    <div>
+    <div class="result-label">
       預估租金
     </div>
 
@@ -925,11 +1068,11 @@ footer {
     <select id="watchType">
 
       <option value="solo">
-        ⌚ 單獨租借｜NT$60／天
+        ⌚ 單獨租借
       </option>
 
       <option value="phone">
-        📱 與 VIVO 手機合租｜NT$40／天
+        📱 與 VIVO 手機合租
       </option>
 
     </select>
@@ -954,7 +1097,7 @@ footer {
 
   <div class="result">
 
-    <div>
+    <div class="result-label">
       預估租金
     </div>
 
@@ -980,25 +1123,23 @@ footer {
 
 <div class="card">
 
-  <h2>⏰VIVO超時規則</h2>
+  <h2>⏰ VIVO 超時規則</h2>
 
-  <p>
+  <div class="highlight">
+
     超過原租借時間：
-  </p>
 
-  <p>
-    1 小時：<strong>＋NT$100</strong>
-  </p>
+    <br>
 
-  <p>
-    2～4 小時：
+    1～4 小時：
     <strong>＋NT$100／小時</strong>
-  </p>
 
-  <p>
+    <br>
+
     滿 5 小時（含）：
     <strong>以多 1 天租金計算</strong>
-  </p>
+
+  </div>
 
 </div>
 
@@ -1011,11 +1152,20 @@ footer {
 
   <h2>📦 寄送與面交</h2>
 
-  <p>
-    台南高雄面交、全台寄送<br>
-  ✦ 租借 4 日（含）以上賣貨便免運
-</div>
-  </p>
+  <div class="highlight">
+
+    📍 台南／高雄面交
+
+    <br>
+
+    📦 全台寄送｜賣貨便
+
+    <br>
+
+    ✦ <strong>手機／Apple Watch 租借 4 日（含）以上免運</strong>
+
+  </div>
+
 </div>
 
 
@@ -1028,123 +1178,128 @@ footer {
   <h2>❓ 常見問題</h2>
 
 
-  <div class="faq-item">
+  <details>
 
-    <div class="faq-question">
+    <summary>
       Q1．可以在哪裡面交？
-    </div>
+    </summary>
 
-    <div>
-      台南／高雄皆可面交，
-      詳細地點請私訊確認。
-    </div>
+    <p>
+      台南／高雄皆可面交，詳細地點請私訊確認。
+    </p>
 
-  </div>
-
-
-  <div class="faq-item">
-
-    <div class="faq-question">
-      Q2．200mm／400mm 增距鏡可以單獨租嗎？
-    </div>
-
-    <div>
-      可以。
-      <br>
-      單租增距鏡 NT$300／天，
-      且不含手柄。
-    </div>
-
-  </div>
+  </details>
 
 
-  <div class="faq-item">
+  <details>
 
-    <div class="faq-question">
-      Q3．跟手機一起租鏡頭有什麼？
-    </div>
+    <summary>
+      Q2．200mm／400mm 可以單獨租嗎？
+    </summary>
 
-    <div>
-      手機＋增距鏡方案包含
-      <strong>手柄＋鏡頭轉接環</strong>。
-    </div>
+    <p>
+      可以。單租增距鏡 NT$300／天，不含手柄。
+    </p>
 
-  </div>
+  </details>
 
 
-  <div class="faq-item">
+  <details>
 
-    <div class="faq-question">
+    <summary>
+      Q3．手機＋鏡頭包含什麼？
+    </summary>
+
+    <p>
+      包含手柄＋鏡頭轉接環。
+    </p>
+
+  </details>
+
+
+  <details>
+
+    <summary>
       Q4．手機租 3 天以上有優惠嗎？
-    </div>
+    </summary>
 
-    <div>
-      有。
-      <br>
-      3 天（含）以上為 NT$600／天。
-    </div>
+    <p>
+      有，3 天（含）以上 NT$600／天。
+    </p>
 
-  </div>
+  </details>
 
 
-  <div class="faq-item">
+  <details>
 
-    <div class="faq-question">
+    <summary>
       Q5．10 天以上有長租優惠嗎？
-    </div>
+    </summary>
 
-    <div>
-      有。
-      <br><br>
-      手機＋單顆鏡頭：8 折
+    <p>
+      手機＋單顆鏡頭：8 折。
       <br>
-      手機＋200mm＋400mm：7 折
-    </div>
+      手機＋200mm＋400mm：7 折。
+    </p>
 
-  </div>
+  </details>
 
 
-  <div class="faq-item">
+  <details>
 
-    <div class="faq-question">
+    <summary>
       Q6．Apple Watch 可以做什麼？
-    </div>
+    </summary>
 
-    <div>
+    <p>
       可用於簽售／演唱會錄音。
-    </div>
+    </p>
 
-  </div>
-
-  <div class="faq-item">
-
-    <div class="faq-question">
-      Q7．怎麼預約？
-    </div>
-
-    <div>
-      請先確認網站上的檔期，
-      再透過 Threads 私訊詢問。
-    </div>
-
-  </div>
+  </details>
 
 
-  <div class="faq-item">
+  <details>
 
-    <div class="faq-question">
-      Q8．需要提供什麼資料？
-    </div>
+    <summary>
+      Q7．租借 4 天以上有免運嗎？
+    </summary>
 
-    <div>
+    <p>
+      有。手機／Apple Watch 租借 4 日（含）以上，
+      使用賣貨便寄送免運。
+    </p>
+
+  </details>
+
+
+  <details>
+
+    <summary>
+      Q8．怎麼預約？
+    </summary>
+
+    <p>
+      請先確認網站上的檔期，再透過 Threads 私訊詢問。
+    </p>
+
+  </details>
+
+
+  <details>
+
+    <summary>
+      Q9．需要提供什麼資料？
+    </summary>
+
+    <p>
       ① 租借日期
       <br>
       ② 想租的設備
       <br>
       ③ 活動／演唱會名稱
-    </div>
+    </p>
 
-  </div>
+  </details>
 
 </div>
 
@@ -1157,48 +1312,40 @@ footer {
 
   <h2>📩 聯絡方式</h2>
 
-  <p>
+  <div class="contact-row">
 
-    Instagram：
-    <a
-      class="contact-link"
-      href="https://www.instagram.com/vivo_x300_u_/"
-      target="_blank"
-      rel="noopener">
+    <div class="contact-box">
 
-      <strong>@vivo_x300_u_</strong>
+      Instagram：
+      <a
+        class="contact-link"
+        href="https://www.instagram.com/vivo_x300_u_/"
+        target="_blank"
+        rel="noopener">
+        <strong>@vivo_x300_u_</strong>
+      </a>
 
-    </a>
+      <span class="warning">
+        ⚠️ 目前 IG 私訊功能故障，請改用 Threads。
+      </span>
 
-    <br>
-
-    <span class="warning">
-      ⚠️ 目前 IG 私訊功能故障，請改用 Threads 聯繫。
-    </span>
-
-  </p>
+    </div>
 
 
-  <p>
+    <div class="contact-box">
 
-    Threads：
+      Threads：
+      <a
+        class="contact-link"
+        href="https://www.threads.com/@vivo_x300_u_"
+        target="_blank"
+        rel="noopener">
+        <strong>@vivo_x300_u_</strong>
+      </a>
 
-    <a
-      class="contact-link"
-      href="https://www.threads.com/@vivo_x300_u_?igshid=NTc4MTIwNjQ2YQ=="
-      target="_blank"
-      rel="noopener">
+    </div>
 
-      <strong>@vivo_x300_u_</strong>
-
-    </a>
-
-  </p>
-
-  <p>
-    如需預約租借，
-    請先確認日曆檔期，再透過 Threads 私訊詢問。
-  </p>
+  </div>
 
 </div>
 
@@ -1209,7 +1356,7 @@ footer {
 
   VIVO X300 ULTRA 手機租借
   <br>
-  V9｜Google Sheet 即時同步
+  V10｜Google Sheet 即時同步
 
 </footer>
 
@@ -1255,9 +1402,11 @@ function normalizeDate(value) {
 
   const y = match[1];
 
-  const m = String(match[2]).padStart(2, "0");
+  const m =
+    String(match[2]).padStart(2, "0");
 
-  const d = String(match[3]).padStart(2, "0");
+  const d =
+    String(match[3]).padStart(2, "0");
 
   return `${y}-${m}-${d}`;
 }
@@ -1271,7 +1420,8 @@ function normalizeStatus(value) {
 
   if (!value) return "";
 
-  const text = String(value).trim();
+  const text =
+    String(value).trim();
 
   if (
     text.includes("可租") ||
@@ -1307,9 +1457,10 @@ function normalizeEquipment(value) {
 
   if (!value) return "";
 
-  const text = String(value)
-    .trim()
-    .toLowerCase();
+  const text =
+    String(value)
+      .trim()
+      .toLowerCase();
 
   if (
     text === "手機" ||
@@ -1349,24 +1500,6 @@ function normalizeAvailabilityItem(item) {
     return null;
   }
 
-  /*
-    目前 API 實際格式：
-
-    {
-      date: "2026-09-05",
-      status: "手機",
-      note: "已租"
-    }
-
-    未來也支援：
-
-    {
-      date: "2026-09-05",
-      equipment: "手機",
-      status: "已租"
-    }
-  */
-
   const date =
     normalizeDate(item.date);
 
@@ -1375,6 +1508,17 @@ function normalizeAvailabilityItem(item) {
 
   let status =
     item.status;
+
+
+  /*
+    舊 API：
+
+    {
+      date: "2026-09-05",
+      status: "手機",
+      note: "已租"
+    }
+  */
 
   if (
     !equipment &&
@@ -1385,26 +1529,43 @@ function normalizeAvailabilityItem(item) {
       item.status === "Apple Watch"
     )
   ) {
-    equipment = item.status;
-    status = item.note;
+
+    equipment =
+      item.status;
+
+    status =
+      item.note;
+
   }
+
 
   equipment =
     normalizeEquipment(equipment);
 
   status =
-    normalizeStatus(status || item.note);
+    normalizeStatus(
+      status || item.note
+    );
+
 
   if (!date || !equipment) {
     return null;
   }
 
+
   return {
+
     date,
+
     equipment,
+
     status,
-    note: item.note || ""
+
+    note:
+      item.note || ""
+
   };
+
 }
 
 
@@ -1412,7 +1573,10 @@ function normalizeAvailabilityItem(item) {
    Find Availability
 ================================================== */
 
-function findAvailability(date, equipment) {
+function findAvailability(
+  date,
+  equipment
+) {
 
   return AVAILABILITY.find(item =>
 
@@ -1425,130 +1589,13 @@ function findAvailability(date, equipment) {
 
 
 /* ==================================================
-   Load Data
-================================================== */
-
-async function loadData() {
-
-  const syncStatus =
-    document.getElementById("syncStatus");
-
-  syncStatus.className =
-    "sync-status";
-
-  syncStatus.textContent =
-    "⏳ 正在同步 Google Sheet…";
-
-
-  try {
-
-    const url =
-      API_URL +
-      "?t=" +
-      Date.now() +
-      "&siteVersion=9";
-
-
-    const response =
-      await fetch(url, {
-        cache: "no-store"
-      });
-
-
-    if (!response.ok) {
-
-      throw new Error(
-        "HTTP " + response.status
-      );
-
-    }
-
-
-    const data =
-      await response.json();
-
-
-    if (
-      !data ||
-      !Array.isArray(data.availability)
-    ) {
-
-      throw new Error(
-        "API 沒有 availability 資料"
-      );
-
-    }
-
-
-    AVAILABILITY =
-      data.availability
-        .map(normalizeAvailabilityItem)
-        .filter(Boolean);
-
-
-    if (
-      data.prices &&
-      typeof data.prices === "object"
-    ) {
-
-      PRICES = data.prices;
-
-    }
-
-
-    updatePrices();
-
-    renderCalendar();
-
-    calculatePrice();
-
-    calculateWatchPrice();
-
-
-    syncStatus.textContent =
-      "✓ Google Sheet 同步成功｜" +
-      AVAILABILITY.length +
-      " 筆檔期";
-
-
-    console.log(
-      "V9 API DATA:",
-      data
-    );
-
-    console.log(
-      "V9 AVAILABILITY:",
-      AVAILABILITY
-    );
-
-  }
-
-  catch (error) {
-
-    console.error(
-      "API Error:",
-      error
-    );
-
-
-    syncStatus.className =
-      "sync-status error";
-
-
-    syncStatus.textContent =
-      "⚠️ 檔期同步失敗，請稍後重新整理";
-
-
-  }
-
-}
-
-
-/* ==================================================
    Price
 ================================================== */
 
-function getPrice(key, fallback) {
+function getPrice(
+  key,
+  fallback
+) {
 
   const value =
     PRICES[key];
@@ -1580,44 +1627,251 @@ function getPrice(key, fallback) {
 
 
 /* ==================================================
-   Update Prices
+   Update Visible Prices
 ================================================== */
 
 function updatePrices() {
 
-  /*
-    Google Sheet 價格：
-
-    phoneDaily
-    phone3Daily
-    lensWithPhoneDaily
-    lensAloneDaily
-
-    Apple Watch 若之後加入價格表：
-
-    watchSoloDaily
-    watchPhoneDaily
-  */
-
   const phoneDaily =
-    getPrice("phoneDaily", 700);
+    getPrice(
+      "phoneDaily",
+      700
+    );
 
   const phone3Daily =
-    getPrice("phone3Daily", 600);
+    getPrice(
+      "phoneDaily3Plus",
+      600
+    );
 
-  const lensWithPhoneDaily =
-    getPrice("lensWithPhoneDaily", 200);
+  const lens200Daily =
+    getPrice(
+      "lens200Daily",
+      200
+    );
 
-  const lensAloneDaily =
-    getPrice("lensAloneDaily", 300);
+  const lens400Daily =
+    getPrice(
+      "lens400Daily",
+      200
+    );
+
+  const lensSingleDaily =
+    getPrice(
+      "lensSingleDaily",
+      300
+    );
+
+  const watchCoDaily =
+    getPrice(
+      "appleWatchCoDaily",
+      40
+    );
+
+  const watchSingleDaily =
+    getPrice(
+      "appleWatchSingleDaily",
+      60
+    );
 
 
-  console.log({
-    phoneDaily,
-    phone3Daily,
-    lensWithPhoneDaily,
-    lensAloneDaily
-  });
+  /* 手機 */
+
+  document.getElementById(
+    "displayPhonePrice"
+  ).textContent =
+    `NT$${phoneDaily.toLocaleString()}／天`;
+
+  document.getElementById(
+    "displayPhoneDaily"
+  ).textContent =
+    `NT$${phoneDaily.toLocaleString()}`;
+
+  document.getElementById(
+    "displayPhone3Daily"
+  ).textContent =
+    `NT$${phone3Daily.toLocaleString()}`;
+
+
+  /* Watch */
+
+  document.getElementById(
+    "displayWatchPrice"
+  ).textContent =
+    `NT$${watchSingleDaily.toLocaleString()}／天`;
+
+  document.getElementById(
+    "displayWatchSolo"
+  ).textContent =
+    `NT$${watchSingleDaily.toLocaleString()}`;
+
+  document.getElementById(
+    "displayWatchCo"
+  ).textContent =
+    `NT$${watchCoDaily.toLocaleString()}`;
+
+
+  /* 其他價格卡 */
+
+  const priceBoxes =
+    document.querySelectorAll(".price-box");
+
+
+  if (priceBoxes[1]) {
+
+    const price =
+      priceBoxes[1].querySelector(".price");
+
+    if (price) {
+
+      price.textContent =
+        `NT$${lens200Daily.toLocaleString()}／天`;
+
+    }
+
+  }
+
+
+  if (priceBoxes[2]) {
+
+    const price =
+      priceBoxes[2].querySelector(".price");
+
+    if (price) {
+
+      price.textContent =
+        `NT$${lensSingleDaily.toLocaleString()}／天`;
+
+    }
+
+  }
+
+}
+
+
+/* ==================================================
+   Load Data
+================================================== */
+
+async function loadData() {
+
+  const syncStatus =
+    document.getElementById(
+      "syncStatus"
+    );
+
+
+  syncStatus.className =
+    "sync-status";
+
+  syncStatus.textContent =
+    "⏳ 同步中…";
+
+
+  try {
+
+    const url =
+      API_URL +
+      "?t=" +
+      Date.now() +
+      "&siteVersion=10";
+
+
+    const response =
+      await fetch(
+        url,
+        {
+          cache: "no-store"
+        }
+      );
+
+
+    if (!response.ok) {
+
+      throw new Error(
+        "HTTP " +
+        response.status
+      );
+
+    }
+
+
+    const data =
+      await response.json();
+
+
+    if (
+      !data ||
+      !Array.isArray(
+        data.availability
+      )
+    ) {
+
+      throw new Error(
+        "API 沒有 availability 資料"
+      );
+
+    }
+
+
+    AVAILABILITY =
+      data.availability
+        .map(
+          normalizeAvailabilityItem
+        )
+        .filter(Boolean);
+
+
+    if (
+      data.prices &&
+      typeof data.prices === "object"
+    ) {
+
+      PRICES =
+        data.prices;
+
+    }
+
+
+    updatePrices();
+
+    renderCalendar();
+
+    calculatePrice();
+
+    calculateWatchPrice();
+
+
+    syncStatus.textContent =
+      "✓ 已同步｜" +
+      AVAILABILITY.length +
+      " 筆";
+
+
+    console.log(
+      "V10 API DATA:",
+      data
+    );
+
+
+  }
+
+  catch (error) {
+
+    console.error(
+      "API Error:",
+      error
+    );
+
+
+    syncStatus.className =
+      "sync-status error";
+
+
+    syncStatus.textContent =
+      "⚠️ 同步失敗，請稍後重新整理";
+
+  }
 
 }
 
@@ -1636,17 +1890,23 @@ function switchEquipment(
 
 
   document
-    .querySelectorAll(".calendar-tab")
+    .querySelectorAll(
+      ".calendar-tab"
+    )
     .forEach(btn => {
 
-      btn.classList.remove("active");
+      btn.classList.remove(
+        "active"
+      );
 
     });
 
 
   if (button) {
 
-    button.classList.add("active");
+    button.classList.add(
+      "active"
+    );
 
   }
 
@@ -1682,13 +1942,20 @@ function changeMonth(offset) {
 function renderCalendar() {
 
   const calendar =
-    document.getElementById("calendar");
+    document.getElementById(
+      "calendar"
+    );
 
   const monthTitle =
-    document.getElementById("monthTitle");
+    document.getElementById(
+      "monthTitle"
+    );
 
 
-  if (!calendar || !monthTitle) {
+  if (
+    !calendar ||
+    !monthTitle
+  ) {
     return;
   }
 
@@ -1723,6 +1990,8 @@ function renderCalendar() {
     ).getDate();
 
 
+  /* 空白 */
+
   for (
     let i = 0;
     i < firstDay;
@@ -1730,15 +1999,21 @@ function renderCalendar() {
   ) {
 
     const empty =
-      document.createElement("div");
+      document.createElement(
+        "div"
+      );
 
     empty.className =
       "day empty";
 
-    calendar.appendChild(empty);
+    calendar.appendChild(
+      empty
+    );
 
   }
 
+
+  /* 日期 */
 
   for (
     let day = 1;
@@ -1747,7 +2022,9 @@ function renderCalendar() {
   ) {
 
     const cell =
-      document.createElement("div");
+      document.createElement(
+        "div"
+      );
 
     cell.className =
       "day";
@@ -1765,7 +2042,9 @@ function renderCalendar() {
 
 
     const dayNumber =
-      document.createElement("div");
+      document.createElement(
+        "div"
+      );
 
     dayNumber.className =
       "day-number";
@@ -1780,7 +2059,9 @@ function renderCalendar() {
 
 
     const status =
-      document.createElement("div");
+      document.createElement(
+        "div"
+      );
 
     status.className =
       "day-status";
@@ -1843,15 +2124,21 @@ function renderCalendar() {
       );
 
       status.textContent =
-        record.status || "未設定";
+        record.status ||
+        "未設定";
 
     }
 
 
-    cell.appendChild(status);
+    cell.appendChild(
+      status
+    );
 
 
-    if (record && record.note) {
+    if (
+      record &&
+      record.note
+    ) {
 
       cell.title =
         record.note;
@@ -1859,7 +2146,9 @@ function renderCalendar() {
     }
 
 
-    calendar.appendChild(cell);
+    calendar.appendChild(
+      cell
+    );
 
   }
 
@@ -1882,7 +2171,9 @@ function calculatePrice() {
     Math.max(
       1,
       Number(
-        document.getElementById("days").value
+        document.getElementById(
+          "days"
+        ).value
       ) || 1
     );
 
@@ -1892,12 +2183,13 @@ function calculatePrice() {
       "totalPrice"
     );
 
-
   const detailElement =
     document.getElementById(
       "priceDetail"
     );
 
+
+  /* Google Sheet 價格 */
 
   const phoneDaily =
     getPrice(
@@ -1905,25 +2197,46 @@ function calculatePrice() {
       700
     );
 
-
   const phone3Daily =
     getPrice(
-      "phone3Daily",
+      "phoneDaily3Plus",
       600
     );
 
-
-  const lensWithPhoneDaily =
+  const lens200Daily =
     getPrice(
-      "lensWithPhoneDaily",
+      "lens200Daily",
       200
     );
 
-
-  const lensAloneDaily =
+  const lens400Daily =
     getPrice(
-      "lensAloneDaily",
+      "lens400Daily",
+      200
+    );
+
+  const lensSingleDaily =
+    getPrice(
+      "lensSingleDaily",
       300
+    );
+
+  const longRentalDays =
+    getPrice(
+      "longRentalDays",
+      10
+    );
+
+  const singleLensDiscount =
+    getPrice(
+      "longRentalSingleLensDiscount",
+      0.8
+    );
+
+  const bothLensDiscount =
+    getPrice(
+      "longRentalBothLensDiscount",
+      0.7
     );
 
 
@@ -1932,11 +2245,13 @@ function calculatePrice() {
   let detail = "";
 
 
-  /*
-    手機
-  */
+  /* =========================
+     手機
+  ========================= */
 
-  if (type === "phone") {
+  if (
+    type === "phone"
+  ) {
 
     const daily =
       days >= 3
@@ -1949,15 +2264,14 @@ function calculatePrice() {
 
 
     detail =
-      `${days} 天 × NT$${daily}／天`;
+      `${days} 天 × NT$${daily.toLocaleString()}／天`;
 
   }
 
 
-  /*
-    單租 200
-    單租 400
-  */
+  /* =========================
+     單租 200／400
+  ========================= */
 
   else if (
     type === "lens200" ||
@@ -1965,25 +2279,24 @@ function calculatePrice() {
   ) {
 
     total =
-      lensAloneDaily * days;
+      lensSingleDaily * days;
 
 
     detail =
-      `${days} 天 × NT$${lensAloneDaily}／天｜單租鏡頭，不含手柄`;
+      `${days} 天 × NT$${lensSingleDaily.toLocaleString()}／天｜單租鏡頭，不含手柄`;
 
   }
 
 
-  /*
-    手機＋單顆鏡頭
-  */
+  /* =========================
+     手機＋200
+  ========================= */
 
   else if (
-    type === "phone200" ||
-    type === "phone400"
+    type === "phone200"
   ) {
 
-    const phoneDailyRate =
+    const phoneRate =
       days >= 3
         ? phone3Daily
         : phoneDaily;
@@ -1991,19 +2304,22 @@ function calculatePrice() {
 
     const normal =
       (
-        phoneDailyRate +
-        lensWithPhoneDaily
+        phoneRate +
+        lens200Daily
       ) * days;
 
 
-    if (days >= 10) {
+    if (
+      days >= longRentalDays
+    ) {
 
       total =
-        normal * 0.8;
+        normal *
+        singleLensDiscount;
 
 
       detail =
-        `${days} 天｜手機＋單顆鏡頭｜10 天以上 8 折`;
+        `${days} 天｜手機＋200mm｜${longRentalDays} 天以上 ${Math.round(singleLensDiscount * 100)} 折`;
 
     }
 
@@ -2014,22 +2330,22 @@ function calculatePrice() {
 
 
       detail =
-        `${days} 天｜手機＋單顆鏡頭`;
+        `${days} 天｜手機＋200mm`;
 
     }
 
   }
 
 
-  /*
-    手機＋兩顆鏡頭
-  */
+  /* =========================
+     手機＋400
+  ========================= */
 
   else if (
-    type === "phoneBoth"
+    type === "phone400"
   ) {
 
-    const phoneDailyRate =
+    const phoneRate =
       days >= 3
         ? phone3Daily
         : phoneDaily;
@@ -2037,19 +2353,72 @@ function calculatePrice() {
 
     const normal =
       (
-        phoneDailyRate +
-        lensWithPhoneDaily * 2
+        phoneRate +
+        lens400Daily
       ) * days;
 
 
-    if (days >= 10) {
+    if (
+      days >= longRentalDays
+    ) {
 
       total =
-        normal * 0.7;
+        normal *
+        singleLensDiscount;
 
 
       detail =
-        `${days} 天｜手機＋200mm＋400mm｜10 天以上 7 折`;
+        `${days} 天｜手機＋400mm｜${longRentalDays} 天以上 ${Math.round(singleLensDiscount * 100)} 折`;
+
+    }
+
+    else {
+
+      total =
+        normal;
+
+
+      detail =
+        `${days} 天｜手機＋400mm`;
+
+    }
+
+  }
+
+
+  /* =========================
+     手機＋雙鏡頭
+  ========================= */
+
+  else if (
+    type === "phoneBoth"
+  ) {
+
+    const phoneRate =
+      days >= 3
+        ? phone3Daily
+        : phoneDaily;
+
+
+    const normal =
+      (
+        phoneRate +
+        lens200Daily +
+        lens400Daily
+      ) * days;
+
+
+    if (
+      days >= longRentalDays
+    ) {
+
+      total =
+        normal *
+        bothLensDiscount;
+
+
+      detail =
+        `${days} 天｜手機＋200mm＋400mm｜${longRentalDays} 天以上 ${Math.round(bothLensDiscount * 100)} 折`;
 
     }
 
@@ -2069,7 +2438,9 @@ function calculatePrice() {
 
   totalElement.textContent =
     "NT$" +
-    Math.round(total).toLocaleString();
+    Math.round(
+      total
+    ).toLocaleString();
 
 
   detailElement.textContent =
@@ -2106,7 +2477,6 @@ function calculateWatchPrice() {
       "watchTotal"
     );
 
-
   const detailElement =
     document.getElementById(
       "watchDetail"
@@ -2115,21 +2485,28 @@ function calculateWatchPrice() {
 
   const soloDaily =
     getPrice(
-      "watchSoloDaily",
+      "appleWatchSingleDaily",
       60
     );
 
 
-  const phoneDaily =
+  const coDaily =
     getPrice(
-      "watchPhoneDaily",
+      "appleWatchCoDaily",
       40
+    );
+
+
+  const freeShippingDays =
+    getPrice(
+      "appleWatchFreeShippingDays",
+      4
     );
 
 
   const daily =
     type === "phone"
-      ? phoneDaily
+      ? coDaily
       : soloDaily;
 
 
@@ -2142,12 +2519,16 @@ function calculateWatchPrice() {
     total.toLocaleString();
 
 
-  if (type === "solo") {
+  if (
+    type === "solo"
+  ) {
 
-    if (days >= 4) {
+    if (
+      days >= freeShippingDays
+    ) {
 
       detailElement.textContent =
-        `${days} 天 × NT$${soloDaily}／天｜單租 4 天以上免運費`;
+        `${days} 天 × NT$${soloDaily}／天｜${freeShippingDays} 天以上賣貨便免運`;
 
     }
 
@@ -2162,8 +2543,21 @@ function calculateWatchPrice() {
 
   else {
 
-    detailElement.textContent =
-      `${days} 天 × NT$${phoneDaily}／天｜與 VIVO 手機合租`;
+    if (
+      days >= freeShippingDays
+    ) {
+
+      detailElement.textContent =
+        `${days} 天 × NT$${coDaily}／天｜與 VIVO 手機合租｜${freeShippingDays} 天以上賣貨便免運`;
+
+    }
+
+    else {
+
+      detailElement.textContent =
+        `${days} 天 × NT$${coDaily}／天｜與 VIVO 手機合租`;
+
+    }
 
   }
 
@@ -2175,7 +2569,9 @@ function calculateWatchPrice() {
 ================================================== */
 
 document
-  .getElementById("equipmentSelect")
+  .getElementById(
+    "equipmentSelect"
+  )
   .addEventListener(
     "change",
     calculatePrice
@@ -2183,7 +2579,9 @@ document
 
 
 document
-  .getElementById("days")
+  .getElementById(
+    "days"
+  )
   .addEventListener(
     "input",
     calculatePrice
@@ -2191,7 +2589,9 @@ document
 
 
 document
-  .getElementById("watchType")
+  .getElementById(
+    "watchType"
+  )
   .addEventListener(
     "change",
     calculateWatchPrice
@@ -2199,7 +2599,9 @@ document
 
 
 document
-  .getElementById("watchDays")
+  .getElementById(
+    "watchDays"
+  )
   .addEventListener(
     "input",
     calculateWatchPrice
@@ -2219,9 +2621,9 @@ calculateWatchPrice();
 loadData();
 
 
-/*
-  每 5 分鐘重新同步一次 Google Sheet
-*/
+/* ==================================================
+   每 5 分鐘同步
+================================================== */
 
 setInterval(
   loadData,
