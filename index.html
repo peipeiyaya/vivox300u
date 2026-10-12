@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+幫我把ig私訊功能故障拿掉<!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
 <meta charset="UTF-8">
@@ -644,7 +644,6 @@ footer {
   </div>
 </header>
 
-
 <main class="container">
 
 <!-- =========================
@@ -660,7 +659,6 @@ footer {
   </div>
 
 </div>
-
 
 <!-- =========================
      Equipment
@@ -688,7 +686,6 @@ footer {
 
     </div>
 
-
     <div class="equipment">
 
       <div class="equipment-icon">🔭</div>
@@ -705,7 +702,6 @@ footer {
 
     </div>
 
-
     <div class="equipment">
 
       <div class="equipment-icon">🔭</div>
@@ -721,7 +717,6 @@ footer {
       </p>
 
     </div>
-
 
     <div class="equipment">
 
@@ -742,7 +737,6 @@ footer {
   </div>
 
 </div>
-
 
 <!-- =========================
      Price
@@ -775,7 +769,6 @@ footer {
 
     </div>
 
-
     <div class="price-box">
 
       <h3>🔭 增距鏡｜與手機合租</h3>
@@ -794,7 +787,6 @@ footer {
 
     </div>
 
-
     <div class="price-box">
 
       <h3>🔭 增距鏡｜單獨租借</h3>
@@ -812,7 +804,6 @@ footer {
       </div>
 
     </div>
-
 
     <div class="price-box">
 
@@ -843,7 +834,6 @@ footer {
 
 </div>
 
-
 <!-- =========================
      Long Rental
 ========================= -->
@@ -869,7 +859,6 @@ footer {
   </div>
 
 </div>
-
 
 <!-- =========================
      Calendar
@@ -911,7 +900,6 @@ footer {
 
   </div>
 
-
   <div class="calendar-header">
 
     <button onclick="changeMonth(-1)">
@@ -929,7 +917,6 @@ footer {
 
   </div>
 
-
   <div class="weekdays">
 
     <div>日</div>
@@ -942,12 +929,10 @@ footer {
 
   </div>
 
-
   <div
     id="calendar"
     class="calendar">
   </div>
-
 
   <div class="legend">
 
@@ -969,7 +954,6 @@ footer {
   </div>
 
 </div>
-
 
 <!-- =========================
      VIVO Calculator
@@ -1015,7 +999,6 @@ footer {
 
   </div>
 
-
   <div class="form-row">
 
     <label>
@@ -1029,7 +1012,6 @@ footer {
       value="1">
 
   </div>
-
 
   <div class="result">
 
@@ -1051,7 +1033,6 @@ footer {
   </div>
 
 </div>
-
 
 <!-- =========================
      Apple Watch Calculator
@@ -1081,7 +1062,6 @@ footer {
 
   </div>
 
-
   <div class="form-row">
 
     <label>
@@ -1095,7 +1075,6 @@ footer {
       value="1">
 
   </div>
-
 
   <div class="result">
 
@@ -1117,7 +1096,6 @@ footer {
   </div>
 
 </div>
-
 
 <!-- =========================
      Overtime
@@ -1145,7 +1123,6 @@ footer {
 
 </div>
 
-
 <!-- =========================
      Shipping
 ========================= -->
@@ -1170,7 +1147,6 @@ footer {
 
 </div>
 
-
 <!-- =========================
      FAQ
 ========================= -->
@@ -1178,7 +1154,6 @@ footer {
 <div class="card">
 
   <h2>❓ 常見問題</h2>
-
 
   <details>
 
@@ -1192,7 +1167,6 @@ footer {
 
   </details>
 
-
   <details>
 
     <summary>
@@ -1204,7 +1178,6 @@ footer {
     </p>
 
   </details>
-
 
   <details>
 
@@ -1218,7 +1191,6 @@ footer {
 
   </details>
 
-
   <details>
 
     <summary>
@@ -1230,7 +1202,6 @@ footer {
     </p>
 
   </details>
-
 
   <details>
 
@@ -1246,7 +1217,6 @@ footer {
 
   </details>
 
-
   <details>
 
     <summary>
@@ -1258,7 +1228,6 @@ footer {
     </p>
 
   </details>
-
 
   <details>
 
@@ -1273,7 +1242,6 @@ footer {
 
   </details>
 
-
   <details>
 
     <summary>
@@ -1281,11 +1249,10 @@ footer {
     </summary>
 
     <p>
-      請先確認網站上的檔期，再透過 Threads或Instagram 私訊詢問。
+      請先確認網站上的檔期，再透過 Threads 或 Instagram私訊詢問。
     </p>
 
   </details>
-
 
   <details>
 
@@ -1304,8 +1271,6 @@ footer {
   </details>
 
 </div>
-
-
 
 <!-- =========================
      Contact
@@ -1328,6 +1293,8 @@ footer {
         <strong>@vivo_x300_u_</strong>
       </a>
 
+      </span>
+
     </div>
 
     <div class="contact-box">
@@ -1347,13 +1314,24 @@ footer {
 
 </div>
 
+</main>
+
+<footer>
+
+  VIVO X300 ULTRA 手機租借
+  <br>
+  V10｜Google Sheet 即時同步
+
+</footer>
+
+<script>
+
 /* ==================================================
    Google Apps Script API
 ================================================== */
 
 const API_URL =
   "https://script.google.com/macros/s/AKfycbxYZWULy9dAHNfcGaA4-T4r83GfzaqdcvuP7fNusVRs5mhWA6tLV09i_pJLSArg8E1V/exec";
-
 
 /* ==================================================
    Global
@@ -1366,7 +1344,6 @@ let PRICES = {};
 let currentEquipment = "手機";
 
 let currentMonth = new Date(2026, 8, 1);
-
 
 /* ==================================================
    Date Normalize
@@ -1394,7 +1371,6 @@ function normalizeDate(value) {
 
   return `${y}-${m}-${d}`;
 }
-
 
 /* ==================================================
    Status Normalize
@@ -1431,7 +1407,6 @@ function normalizeStatus(value) {
 
   return text;
 }
-
 
 /* ==================================================
    Equipment Normalize
@@ -1473,7 +1448,6 @@ function normalizeEquipment(value) {
   return String(value).trim();
 }
 
-
 /* ==================================================
    Availability Normalize
 ================================================== */
@@ -1492,7 +1466,6 @@ function normalizeAvailabilityItem(item) {
 
   let status =
     item.status;
-
 
   /*
     舊 API：
@@ -1522,7 +1495,6 @@ function normalizeAvailabilityItem(item) {
 
   }
 
-
   equipment =
     normalizeEquipment(equipment);
 
@@ -1531,11 +1503,9 @@ function normalizeAvailabilityItem(item) {
       status || item.note
     );
 
-
   if (!date || !equipment) {
     return null;
   }
-
 
   return {
 
@@ -1551,7 +1521,6 @@ function normalizeAvailabilityItem(item) {
   };
 
 }
-
 
 /* ==================================================
    Find Availability
@@ -1571,7 +1540,6 @@ function findAvailability(
 
 }
 
-
 /* ==================================================
    Price
 ================================================== */
@@ -1584,7 +1552,6 @@ function getPrice(
   const value =
     PRICES[key];
 
-
   if (
     value === undefined ||
     value === null ||
@@ -1595,20 +1562,17 @@ function getPrice(
 
   }
 
-
   const number =
     Number(
       String(value)
         .replace(/[^\d.-]/g, "")
     );
 
-
   return Number.isFinite(number)
     ? number
     : fallback;
 
 }
-
 
 /* ==================================================
    Update Visible Prices
@@ -1658,7 +1622,6 @@ function updatePrices() {
       60
     );
 
-
   /* 手機 */
 
   document.getElementById(
@@ -1675,7 +1638,6 @@ function updatePrices() {
     "displayPhone3Daily"
   ).textContent =
     `NT$${phone3Daily.toLocaleString()}`;
-
 
   /* Watch */
 
@@ -1694,12 +1656,10 @@ function updatePrices() {
   ).textContent =
     `NT$${watchCoDaily.toLocaleString()}`;
 
-
   /* 其他價格卡 */
 
   const priceBoxes =
     document.querySelectorAll(".price-box");
-
 
   if (priceBoxes[1]) {
 
@@ -1714,7 +1674,6 @@ function updatePrices() {
     }
 
   }
-
 
   if (priceBoxes[2]) {
 
@@ -1732,7 +1691,6 @@ function updatePrices() {
 
 }
 
-
 /* ==================================================
    Load Data
 ================================================== */
@@ -1744,13 +1702,11 @@ async function loadData() {
       "syncStatus"
     );
 
-
   syncStatus.className =
     "sync-status";
 
   syncStatus.textContent =
     "⏳ 同步中…";
-
 
   try {
 
@@ -1760,7 +1716,6 @@ async function loadData() {
       Date.now() +
       "&siteVersion=10";
 
-
     const response =
       await fetch(
         url,
@@ -1768,7 +1723,6 @@ async function loadData() {
           cache: "no-store"
         }
       );
-
 
     if (!response.ok) {
 
@@ -1779,10 +1733,8 @@ async function loadData() {
 
     }
 
-
     const data =
       await response.json();
-
 
     if (
       !data ||
@@ -1797,14 +1749,12 @@ async function loadData() {
 
     }
 
-
     AVAILABILITY =
       data.availability
         .map(
           normalizeAvailabilityItem
         )
         .filter(Boolean);
-
 
     if (
       data.prices &&
@@ -1816,7 +1766,6 @@ async function loadData() {
 
     }
 
-
     updatePrices();
 
     renderCalendar();
@@ -1825,18 +1774,15 @@ async function loadData() {
 
     calculateWatchPrice();
 
-
     syncStatus.textContent =
       "✓ 已同步｜" +
       AVAILABILITY.length +
       " 筆";
 
-
     console.log(
       "V10 API DATA:",
       data
     );
-
 
   }
 
@@ -1847,10 +1793,8 @@ async function loadData() {
       error
     );
 
-
     syncStatus.className =
       "sync-status error";
-
 
     syncStatus.textContent =
       "⚠️ 同步失敗，請稍後重新整理";
@@ -1858,7 +1802,6 @@ async function loadData() {
   }
 
 }
-
 
 /* ==================================================
    Calendar Equipment
@@ -1872,7 +1815,6 @@ function switchEquipment(
   currentEquipment =
     equipment;
 
-
   document
     .querySelectorAll(
       ".calendar-tab"
@@ -1885,7 +1827,6 @@ function switchEquipment(
 
     });
 
-
   if (button) {
 
     button.classList.add(
@@ -1894,11 +1835,9 @@ function switchEquipment(
 
   }
 
-
   renderCalendar();
 
 }
-
 
 /* ==================================================
    Change Month
@@ -1913,11 +1852,9 @@ function changeMonth(offset) {
       1
     );
 
-
   renderCalendar();
 
 }
-
 
 /* ==================================================
    Render Calendar
@@ -1935,7 +1872,6 @@ function renderCalendar() {
       "monthTitle"
     );
 
-
   if (
     !calendar ||
     !monthTitle
@@ -1943,9 +1879,7 @@ function renderCalendar() {
     return;
   }
 
-
   calendar.innerHTML = "";
-
 
   const year =
     currentMonth.getFullYear();
@@ -1953,10 +1887,8 @@ function renderCalendar() {
   const month =
     currentMonth.getMonth();
 
-
   monthTitle.textContent =
     `${year} 年 ${month + 1} 月`;
-
 
   const firstDay =
     new Date(
@@ -1965,14 +1897,12 @@ function renderCalendar() {
       1
     ).getDay();
 
-
   const daysInMonth =
     new Date(
       year,
       month + 1,
       0
     ).getDate();
-
 
   /* 空白 */
 
@@ -1996,7 +1926,6 @@ function renderCalendar() {
 
   }
 
-
   /* 日期 */
 
   for (
@@ -2013,17 +1942,14 @@ function renderCalendar() {
     cell.className =
       "day";
 
-
     const date =
       `${year}-${String(month + 1).padStart(2, "0")}-${String(day).padStart(2, "0")}`;
-
 
     const record =
       findAvailability(
         date,
         currentEquipment
       );
-
 
     const dayNumber =
       document.createElement(
@@ -2036,11 +1962,9 @@ function renderCalendar() {
     dayNumber.textContent =
       day;
 
-
     cell.appendChild(
       dayNumber
     );
-
 
     const status =
       document.createElement(
@@ -2049,7 +1973,6 @@ function renderCalendar() {
 
     status.className =
       "day-status";
-
 
     if (!record) {
 
@@ -2113,11 +2036,9 @@ function renderCalendar() {
 
     }
 
-
     cell.appendChild(
       status
     );
-
 
     if (
       record &&
@@ -2129,7 +2050,6 @@ function renderCalendar() {
 
     }
 
-
     calendar.appendChild(
       cell
     );
@@ -2137,7 +2057,6 @@ function renderCalendar() {
   }
 
 }
-
 
 /* ==================================================
    VIVO Calculator
@@ -2150,7 +2069,6 @@ function calculatePrice() {
       "equipmentSelect"
     ).value;
 
-
   const days =
     Math.max(
       1,
@@ -2161,7 +2079,6 @@ function calculatePrice() {
       ) || 1
     );
 
-
   const totalElement =
     document.getElementById(
       "totalPrice"
@@ -2171,7 +2088,6 @@ function calculatePrice() {
     document.getElementById(
       "priceDetail"
     );
-
 
   /* Google Sheet 價格 */
 
@@ -2223,11 +2139,9 @@ function calculatePrice() {
       0.7
     );
 
-
   let total = 0;
 
   let detail = "";
-
 
   /* =========================
      手機
@@ -2242,16 +2156,13 @@ function calculatePrice() {
         ? phone3Daily
         : phoneDaily;
 
-
     total =
       daily * days;
-
 
     detail =
       `${days} 天 × NT$${daily.toLocaleString()}／天`;
 
   }
-
 
   /* =========================
      單租 200／400
@@ -2265,12 +2176,10 @@ function calculatePrice() {
     total =
       lensSingleDaily * days;
 
-
     detail =
       `${days} 天 × NT$${lensSingleDaily.toLocaleString()}／天｜單租鏡頭，不含手柄`;
 
   }
-
 
   /* =========================
      手機＋200
@@ -2285,13 +2194,11 @@ function calculatePrice() {
         ? phone3Daily
         : phoneDaily;
 
-
     const normal =
       (
         phoneRate +
         lens200Daily
       ) * days;
-
 
     if (
       days >= longRentalDays
@@ -2300,7 +2207,6 @@ function calculatePrice() {
       total =
         normal *
         singleLensDiscount;
-
 
       detail =
         `${days} 天｜手機＋200mm｜${longRentalDays} 天以上 ${Math.round(singleLensDiscount * 100)} 折`;
@@ -2312,14 +2218,12 @@ function calculatePrice() {
       total =
         normal;
 
-
       detail =
         `${days} 天｜手機＋200mm`;
 
     }
 
   }
-
 
   /* =========================
      手機＋400
@@ -2334,13 +2238,11 @@ function calculatePrice() {
         ? phone3Daily
         : phoneDaily;
 
-
     const normal =
       (
         phoneRate +
         lens400Daily
       ) * days;
-
 
     if (
       days >= longRentalDays
@@ -2349,7 +2251,6 @@ function calculatePrice() {
       total =
         normal *
         singleLensDiscount;
-
 
       detail =
         `${days} 天｜手機＋400mm｜${longRentalDays} 天以上 ${Math.round(singleLensDiscount * 100)} 折`;
@@ -2361,14 +2262,12 @@ function calculatePrice() {
       total =
         normal;
 
-
       detail =
         `${days} 天｜手機＋400mm`;
 
     }
 
   }
-
 
   /* =========================
      手機＋雙鏡頭
@@ -2383,14 +2282,12 @@ function calculatePrice() {
         ? phone3Daily
         : phoneDaily;
 
-
     const normal =
       (
         phoneRate +
         lens200Daily +
         lens400Daily
       ) * days;
-
 
     if (
       days >= longRentalDays
@@ -2399,7 +2296,6 @@ function calculatePrice() {
       total =
         normal *
         bothLensDiscount;
-
 
       detail =
         `${days} 天｜手機＋200mm＋400mm｜${longRentalDays} 天以上 ${Math.round(bothLensDiscount * 100)} 折`;
@@ -2411,7 +2307,6 @@ function calculatePrice() {
       total =
         normal;
 
-
       detail =
         `${days} 天｜手機＋200mm＋400mm`;
 
@@ -2419,19 +2314,16 @@ function calculatePrice() {
 
   }
 
-
   totalElement.textContent =
     "NT$" +
     Math.round(
       total
     ).toLocaleString();
 
-
   detailElement.textContent =
     detail;
 
 }
-
 
 /* ==================================================
    Apple Watch Calculator
@@ -2444,7 +2336,6 @@ function calculateWatchPrice() {
       "watchType"
     ).value;
 
-
   const days =
     Math.max(
       1,
@@ -2454,7 +2345,6 @@ function calculateWatchPrice() {
         ).value
       ) || 1
     );
-
 
   const totalElement =
     document.getElementById(
@@ -2466,13 +2356,11 @@ function calculateWatchPrice() {
       "watchDetail"
     );
 
-
   const soloDaily =
     getPrice(
       "appleWatchSingleDaily",
       60
     );
-
 
   const coDaily =
     getPrice(
@@ -2480,28 +2368,23 @@ function calculateWatchPrice() {
       40
     );
 
-
   const freeShippingDays =
     getPrice(
       "appleWatchFreeShippingDays",
       4
     );
 
-
   const daily =
     type === "phone"
       ? coDaily
       : soloDaily;
 
-
   const total =
     daily * days;
-
 
   totalElement.textContent =
     "NT$" +
     total.toLocaleString();
-
 
   if (
     type === "solo"
@@ -2547,7 +2430,6 @@ function calculateWatchPrice() {
 
 }
 
-
 /* ==================================================
    Event Listeners
 ================================================== */
@@ -2561,7 +2443,6 @@ document
     calculatePrice
   );
 
-
 document
   .getElementById(
     "days"
@@ -2570,7 +2451,6 @@ document
     "input",
     calculatePrice
   );
-
 
 document
   .getElementById(
@@ -2581,7 +2461,6 @@ document
     calculateWatchPrice
   );
 
-
 document
   .getElementById(
     "watchDays"
@@ -2590,7 +2469,6 @@ document
     "input",
     calculateWatchPrice
   );
-
 
 /* ==================================================
    Initial
@@ -2603,7 +2481,6 @@ calculatePrice();
 calculateWatchPrice();
 
 loadData();
-
 
 /* ==================================================
    每 5 分鐘同步
