@@ -1371,7 +1371,13 @@ let PRICES = {};
 
 let currentEquipment = "手機";
 
-let currentMonth = new Date(2026, 8, 1);
+// 自動從目前月份開始顯示
+let today = new Date();
+let currentMonth = new Date(
+  today.getFullYear(),
+  today.getMonth(),
+  1
+);
 
 /* ==================================================
    Date Normalize
